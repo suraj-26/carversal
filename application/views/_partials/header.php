@@ -22,7 +22,7 @@
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
 	<style>
 		.header{
-			background: #F2D176!important;
+			background: Black!important;
 		}
 		.logo_name{
 			color: #A27700;
@@ -111,7 +111,7 @@
 					</li>
 					<li>
 						<div class="form-group">
-							<label class="logo_name" style="font-size: 18px;margin: 23px 10px 0px 10px;">Medhunt</label>
+							<label class="logo_name" style="font-size: 18px;margin: 23px 10px 0px 10px;color: white">CARVERSAL</label>
 						</div>
 					</li>
 				</ul>
@@ -120,7 +120,7 @@
 					<li class="hidden-xs">
 					</li>
 					<li class="dropdown user-box logout" >
-						<a href="" class="dropdown-toggle waves-effect user-link header" style="color: #4e3a04!important;text-shadow: 0px 1px 2px #00000055; "  data-toggle="dropdown"
+						<a href="" class="dropdown-toggle waves-effect user-link header" style="color: white!important;text-shadow: 0px 1px 2px #00000055; "  data-toggle="dropdown"
 						   aria-expanded="true">
 							<?php echo $this->session->userdata('username'); ?> <i class="fa fa-sort-down"></i>
 						</a>

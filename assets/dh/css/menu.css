@@ -209,8 +209,8 @@ File: Menu
   margin-right: 0;
 }
 #sidebar-menu > ul > li > a.active {
-	background: #f2d17699!important;
-	color: black!important;
+	background: black!important;
+	color: white!important;
 	text-shadow: 0px 4px 5px #00000055!important;
 }
 .nav-second-level.nav li a,

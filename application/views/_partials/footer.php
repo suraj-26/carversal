@@ -1,7 +1,7 @@
 </div>
 
 <footer class="footer text-right">
-	<?php echo date('Y'); ?> &copy; <a href="" target="_blank">Medhunt</a>. All Rights Reserved.
+	<?php echo date('Y'); ?> &copy; <a href="" target="_blank">Carversal</a>. All Rights Reserved.
 </footer>
 <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js" type="text/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
