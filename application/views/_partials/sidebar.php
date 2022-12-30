@@ -20,19 +20,14 @@
 							class="menu_list <?php $this->uri->segment(1) == 'Dashboard' ? 'active' : '' ?>"
 							href="<?php echo base_url(); ?>Dashboard"><i
 								class="fa fa-fw fa-home" style="color:#ff5722;"></i>
-						<span>Dashboard</span></a></li>
+						<span>Trending</span></a></li>
+
 
 				<li class="menu_list"><a
 							class="menu_list"
-							href="<?php echo base_url(); ?>Dashboard1"><i
+							href="<?php echo base_url(); ?>Discovery"><i
 								class="fa fa-fw fa-home" style="color:#ff5722;"></i>
-						<span>Dashboard</span></a></li>
-
-				<li class="menu_list"><a
-							class="menu_list"
-							href="<?php echo base_url(); ?>Dashboard2"><i
-								class="fa fa-fw fa-home" style="color:#ff5722;"></i>
-						<span>Dashboard</span></a></li>
+						<span>Discovery</span></a></li>
 
 			</ul>
 		</div>
