@@ -93,10 +93,10 @@
 		<div class="topbar-left header">
 			<a href="" class="logo">
             <span>
-				<img src="<?php echo base_url();?>assets/images/Mlogo.png" alt="GBT LOGO" style="width: 50%;height: 80%;">
+				<img src="<?php echo base_url();?>assets/images/Screenshot_3.png" alt="GBT LOGO" style="width: 50%;height: 80%;">
             </span>
 				<i>
-					<img src="<?php echo base_url();?>assets/images/Mlogo.png" alt="GBT LOGO" style="width: 50%;height: 80%;">
+					<img src="<?php echo base_url();?>assets/images/Screenshot_3.png" alt="GBT LOGO" style="width: 50%;height: 80%;">
 				</i>
 			</a>
 		</div>
