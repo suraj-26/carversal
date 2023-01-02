@@ -1,28 +1,146 @@
 /*google fonts ( Bebas+Neue,   Roboto:ital,     Poppins:ital  )*/
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+/*google Font Alice */
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
 
-:root{
+:root {
 	--BlueColor: #29B6F6;
 	--DarkGrayColor: #6C6C6C;
 	--LightGrayColor: #888888;
 	--BebasFont: 'Bebas Neue', cursive;
-	--RobotoFont: 'Poppins', sans-serif;
-	--PoppinsFont: 'Roboto', sans-serif;
+	--RobotoFont: 'Roboto', sans-serif;
+	--PoppinsFont: ' Poppins', sans-serif;
+	--AliceFont: 'Alice', serif;
 	--shadow: 4px 9px 4px 0 rgba(0, 0, 0, 0.25);
 }
-.BebasFont{
+
+* {
+	transition: .25s;
+}
+
+.BebasFont {
 	font-family: var(--BebasFont);
 }
-.RobotoFont{
+
+.RobotoFont {
 	font-family: var(--RobotoFont);
 }
-.PoppinsFont{
-	 font-family: var(--PoppinsFont);
- }
-.boxShadow{
+
+.PoppinsFont {
+	font-family: var(--PoppinsFont);
+}
+
+.AliceFont{
+	font-family: var(--AliceFont);
+}
+
+.boxShadow {
 	box-shadow: var(--shadow);
 }
+.BorderBlueButton {
+	border: 2px solid;
+	color: var(--BlueColor);
+	background: transparent;
+	border-radius: 8px;
+	box-shadow: unset !important;
+	padding: 4px 12px;
+	font-weight: 500;
+}
+.LinkBlueButton{
+	color: var(--BlueColor);
+	background: transparent;
+	border-radius: 8px;
+	box-shadow: unset !important;
+	padding: 4px 4px;
+	font-weight: 600;
+	font-size: large;
+}
+.boldHeading{
+	font-weight: 600;
+	font-family: var(--PoppinsFont);
+}
+
+p{
+	color: #6c757d ;
+}
+.ActiveMenu {
+	border: 1px solid var(--BlueColor);
+	background: var(--BlueColor);
+	border-radius: 10rem;
+	padding: 0.6rem 0.6rem;
+	color: white;
+}
+
+.MenuItems {
+	cursor: pointer;
+}
+
+carouselOneSlideBtn {
+	font-size: xx-large;
+	position: absolute;
+	right: -64px;
+	top: 40%;
+	box-shadow: unset;
+	padding: 0;
+	background: white;
+}
+
+.carouselImageText {
+	position: absolute;
+	bottom: 1.5rem;
+	color: white;
+	text-shadow: 2px 2px 5px black;
+	padding: 0px 10px;
+}
+
+.CarouselTwoContent {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	/* border: 3px solid red; */
+	top: 0;
+	border: 0;
+}
+
+.CarouselTwoButtonPosition {
+	position: absolute;
+	bottom: 10px;
+}
+
+
+
+.carouselTwoImageText {
+
+	color: white;
+	text-shadow: 2px 2px 5px black;
+	padding: 10px;
+}
+.TextOverflow, .TextOverflowFourLine{
+	display: block;
+	display: -webkit-box;
+	-webkit-line-clamp: 6;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: justify;
+	line-height: 1.4;
+}
+.TextOverflowFourLine{
+	-webkit-line-clamp: 4;
+}
+.socialIcons a{
+	margin: .25rem .5rem;
+}
+.PrevNext{
+	color: black;
+	text-decoration: none !important;
+	transition: none !important;
+}
+.PrevNext:hover{
+	color: var(--BlueColor);
+}
 /*FillBuleButton;*/
-/*BorderBlueButton;*/
+
 /*BorderBlueSmallButton;*/
 /*BorderBlackButton;*/
+
