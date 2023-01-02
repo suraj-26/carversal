@@ -22,6 +22,8 @@
 <?php include_once "Header.php" ?>
 
 <div class="container">
+	<!--	1st car carousel -->
+
 	<div class="row py-4">
 		<div class="col-md-11">
 			<div class="owl-carousel HomeCarouselOne  owl-theme" id="FirstCarCarousel">
@@ -52,6 +54,9 @@
 			</div>
 		</div>
 	</div>
+
+	<!--	2nd car corousel -->
+
 	<div class="row PoppinsFont " style="font-weight: 700 !important;">
 		<div class="col-12">
 			<div class="owl-carousel HomeCarouselTwo  owl-theme" id="SecondCarCarousel">
@@ -62,8 +67,7 @@
 					</div>
 					<div class="CarouselTwoContent text-center">
 						<h3 class="carouselTwoImageText PoppinsFont">What the Mahindra Bolero Neo and Maruti Alto have
-							in
-							common?</h3>
+							in common?</h3>
 						<button class="btn btn-sm BorderBlueButton CarouselTwoButtonPosition">Read More</button>
 					</div>
 
@@ -96,39 +100,35 @@
 		</div>
 
 	</div>
-	<div class="row">
-		<div class="col-md-7">
-			<div class="row">
-				<div class="col-md-6">
-					<div class="">
-						<img src="<?= base_url() ?>assets/CarvesalImage/carImage-5.png" style="border-radius: 8px"
-							 class="w-100" alt="">
-						<h4 class="PoppinsFont font-weight-bold mt-2">Are digital cockpits bad for data privacy?</h4>
-						<p class="AliceFont mt-3 TextOverflow">It may not seem so, but the Mahindra SUV and Maruti
-							hatchback have a similar story to tell may not seem so, but the Mahindra SUV and Maruti
-							hatchback have a similar story to tell It may not seem so, but the Mahindra SUV and Maruti
-							hatchback have a similar story to tell.....</p>
-						<button class="btn btn-sm BorderBlueButton ">Read More</button>
 
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="">
-						<img src="<?= base_url() ?>assets/CarvesalImage/carImage-6.png" style="border-radius: 8px"
-							 class="w-100" alt="">
-						<h4 class="PoppinsFont font-weight-bold mt-2">Are digital cockpits bad for data privacy?</h4>
-						<p class="AliceFont mt-3 TextOverflow">It may not seem so, but the Mahindra SUV and Maruti
-							hatchback have a similar story to tell may not seem so, but the Mahindra SUV and Maruti
-							hatchback have a similar story to tell It may not seem so, but the Mahindra SUV and Maruti
-							hatchback have a similar story to tell.....</p>
-						<button class="btn btn-sm BorderBlueButton ">Read More</button>
-
-					</div>
-				</div>
+<!--	1st row of car cards 	-->
+	<div class="row" id="CarDetailsCards">
+		<div class="col-md-4">
+			<div class="">
+				<img src="<?= base_url() ?>assets/CarvesalImage/carImage-5.png" style="border-radius: 8px"
+					 class="w-100" alt="">
+				<h4 class="PoppinsFont font-weight-bold mt-2">Are digital cockpits bad for data privacy?</h4>
+				<p class="AliceFont mt-3 TextOverflow">It may not seem so, but the Mahindra SUV and Maruti
+					hatchback have a similar story to tell may not seem so, but the Mahindra SUV and Maruti
+					hatchback have a similar story to tell It may not seem so, but the Mahindra SUV and Maruti
+					hatchback have a similar story to tell.....</p>
+				<button class="btn btn-sm BorderBlueButton ">Read More</button>
 			</div>
-
 		</div>
-		<div class="col-md-5">
+		<div class="col-md-4">
+			<div class="">
+				<img src="<?= base_url() ?>assets/CarvesalImage/carImage-6.png" style="border-radius: 8px"
+					 class="w-100" alt="">
+				<h4 class="PoppinsFont font-weight-bold mt-2">Are digital cockpits bad for data privacy?</h4>
+				<p class="AliceFont mt-3 TextOverflow">It may not seem so, but the Mahindra SUV and Maruti
+					hatchback have a similar story to tell may not seem so, but the Mahindra SUV and Maruti
+					hatchback have a similar story to tell It may not seem so, but the Mahindra SUV and Maruti
+					hatchback have a similar story to tell.....</p>
+				<button class="btn btn-sm BorderBlueButton ">Read More</button>
+
+			</div>
+		</div>
+		<div class="col-md-4">
 			<div class="align-items-center bg-secondary d-flex h-100 justify-content-around" style="
     border-radius: 8px;
     font-size: 10rem !important;
@@ -136,6 +136,11 @@
 				<h1 class="BebasFont">AD</h1>
 			</div>
 		</div>
+
+
+
+
+
 	</div>
 	<div class="row mt-5">
 		<div class="col-md-4">
@@ -235,9 +240,14 @@
 					<div class="">
 						<h3 class="PoppinsFont " style="font-weight: 600;">This is how petrolheads have car meets in a
 							lockdown</h3>
-						<p class="AliceFont text-muted TextOverflowFourLine">It may not seem so, but the Mahindra SUV and Maruti hatchback
+						<p class="AliceFont text-muted TextOverflowFourLine">It may not seem so, but the Mahindra SUV
+							and Maruti hatchback
 							have a similar
-							story to tell  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus magni maiores officiis. Ab autem, consectetur dicta hic nisi numquam officiis praesentium quo reprehenderit repudiandae, tenetur unde! Consectetur deserunt dicta dolor earum excepturi, explicabo fuga harum illum maiores maxime minima mollitia necessitatibus quidem rem, repellat repellendus saepe soluta temporibus velit voluptatem!</p>
+							story to tell Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus magni
+							maiores officiis. Ab autem, consectetur dicta hic nisi numquam officiis praesentium quo
+							reprehenderit repudiandae, tenetur unde! Consectetur deserunt dicta dolor earum excepturi,
+							explicabo fuga harum illum maiores maxime minima mollitia necessitatibus quidem rem,
+							repellat repellendus saepe soluta temporibus velit voluptatem!</p>
 					</div>
 					<div class="align-items-center d-flex justify-content-between">
 						<div class="align-items-center d-flex">
@@ -253,10 +263,11 @@
 " class="mr-2"><i class="fa-solid fa-book-open"></i></span>
 							<h6 class="RobotoFont mb-0">Published on Jul 18, 2021 10:00:00 AM</h6>
 						</div>
-						<h6 class="AliceFont">10 min read</h6>
+						<h6 class="AliceFont mb-0">10 min read</h6>
 					</div>
 				</div>
 			</div>
+			</div>AD
 		</div>
 		<div class="col-12">
 			<div class="row py-4">
@@ -268,9 +279,14 @@
 					<div class="">
 						<h3 class="PoppinsFont" style="font-weight: 600;">This is how petrolheads have car meets in a
 							lockdown</h3>
-						<p class="AliceFont text-muted TextOverflowFourLine">It may not seem so, but the Mahindra SUV and Maruti hatchback
+						<p class="AliceFont text-muted TextOverflowFourLine">It may not seem so, but the Mahindra SUV
+							and Maruti hatchback
 							have a similar
-							story to tell Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aspernatur at, corporis distinctio dolore dolores dolorum explicabo ipsa, labore laboriosam numquam quaerat quis sapiente veniam vero? Animi beatae consequuntur delectus, dicta dignissimos distinctio ducimus eos et exercitationem hic illo illum labore mollitia necessitatibus odit perferendis provident repudiandae ullam velit voluptate?</p>
+							story to tell Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aspernatur at,
+							corporis distinctio dolore dolores dolorum explicabo ipsa, labore laboriosam numquam quaerat
+							quis sapiente veniam vero? Animi beatae consequuntur delectus, dicta dignissimos distinctio
+							ducimus eos et exercitationem hic illo illum labore mollitia necessitatibus odit perferendis
+							provident repudiandae ullam velit voluptate?</p>
 					</div>
 					<div class="align-items-center d-flex justify-content-between">
 						<div class="align-items-center d-flex">
@@ -286,7 +302,7 @@
 " class="mr-2"><i class="fa-solid fa-book-open"></i></span>
 							<h6 class="RobotoFont mb-0">Published on Jul 18, 2021 10:00:00 AM</h6>
 						</div>
-						<h6 class="AliceFont">10 min read</h6>
+						<h6 class="AliceFont mb-0">10 min read</h6>
 					</div>
 				</div>
 			</div>
@@ -396,6 +412,8 @@
 			}
 		}
 	});
+
+
 
 </script>
 </body>
