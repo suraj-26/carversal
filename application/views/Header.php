@@ -33,6 +33,12 @@
 
 
 	<title>Header</title>
+	<style>
+		.form-control:focus {
+			outline: 0;
+			box-shadow: transparent !important;
+		}
+	</style>
 
 </head>
 <body>
@@ -47,9 +53,9 @@
 			</ul>
 		</div>
 		<div class="col-md-3">
-			<div class="SearchBar align-items-center align-items-sm-center badge-pill border d-f d-flex py-1">
+			<div class="SearchBar align-items-center align-items-sm-center badge-pill border border-dark d-f d-flex py-1">
 				<span><i class="fa-solid fa-magnifying-glass"></i></span>
-				<input type="search" class="border-0 form-control py-0" style="font-size: small" placeholder="Search">
+				<input type="search" class="border-0 form-control py-0" style="font-size: small; box-shadow: none !important;" placeholder="Search">
 			</div>
 		</div>
 	</div>
@@ -58,12 +64,12 @@
 
 	// menu javascript
 	// create menu
-	const HeaderMenu = ['Trending', 'Discover', 'Latest', 'Popular'];
+	const HeaderMenu = [{menu:'Trending', Link:''},{menu:'Discover',Link:'Discover'},{menu:'Latest',Link:''},{menu:'Popular',Link:''}];
 	MenuList = HeaderMenu.map((menuTitle, index) => {
 		if (index == 0) {
-			return `<li class="ActiveMenu MenuItems badge-pill px-4 py-1">${menuTitle}</li>`;
+			return `<li class="ActiveMenu MenuItems badge-pill px-4 py-1">${menuTitle.menu}</li>`;
 		} else {
-			return `<li class="MenuItems ">${menuTitle}</li>`;
+			return `<li class="MenuItems ">${menuTitle.menu}</li>`;
 		}
 	})
 	var CarversalMenu = $('#CarversalMenu');

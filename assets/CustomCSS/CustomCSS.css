@@ -139,6 +139,21 @@ carouselOneSlideBtn {
 .PrevNext:hover{
 	color: var(--BlueColor);
 }
+.blogPageSocialIcon a:hover{
+	color: black !important;
+}
+.blogPageSocialIcon a{
+	color: black !important;
+}
+.FirstLetterBig::first-letter {
+	font-size: 200%;
+	line-height: 1;
+	/*text-align: justify;*/
+}
+.favoriteBlog{
+	color: red !important;
+}
+
 /*FillBuleButton;*/
 
 /*BorderBlueSmallButton;*/
