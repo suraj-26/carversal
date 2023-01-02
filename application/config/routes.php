@@ -55,3 +55,7 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['Dashboard'] = "Admin/index";
 
+$route['Discover'] = "Welcome/Discover";
+$route['Trending'] = "Welcome/Trending";
+$route['Blogs'] = "Welcome/Blogs";
+
