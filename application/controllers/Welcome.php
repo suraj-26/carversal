@@ -34,4 +34,8 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('BlogPage');
 	}
+	public function AboutUs()
+{
+	$this->load->view('AboutUs');
+}
 }

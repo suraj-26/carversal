@@ -67,4 +67,5 @@ $route['checkLogin'] = "Admin/checkLogin";
 $route['Discover'] = "Welcome/Discover";
 $route['Trending'] = "Welcome/Trending";
 $route['Blogs'] = "Welcome/Blogs";
+$route['AboutUs'] = "Welcome/AboutUs";
 
