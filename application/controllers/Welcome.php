@@ -76,7 +76,7 @@ class Welcome extends CI_Controller {
 	public function getData(){
 		$data = $this->MasterModel->_rawQuery('SELECT * FROM blogs where blog_type = 1 limit 10');
 		$data3 = $this->MasterModel->_rawQuery('SELECT * FROM blogs where blog_type = 2 limit 10');
-		$data2 = $this->MasterModel->_rawQuery('SELECT * FROM blogs where blog_type = 3 order by read_count desc limit 9');
+		$data2 = $this->MasterModel->_rawQuery('SELECT * FROM blogs where blog_type = 3 order by read_count desc');
 		if($data->totalCount > 0){
 			$response['data'] = $data->data;
  		}else{
