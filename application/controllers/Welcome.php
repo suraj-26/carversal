@@ -106,4 +106,8 @@ class Welcome extends CI_Controller {
 		$response['body'] = "Data Found";
 		echo json_encode($response);
 	}
+	public function AboutUs()
+{
+	$this->load->view('AboutUs');
+}
 }
