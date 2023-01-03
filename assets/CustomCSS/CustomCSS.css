@@ -68,6 +68,9 @@ p{
 	background: var(--BlueColor);
 	border-radius: 10rem;
 	padding: 0.6rem 0.6rem;
+}
+
+.ActiveMenu a{
 	color: white;
 }
 

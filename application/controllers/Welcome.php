@@ -116,4 +116,26 @@ class Welcome extends CI_Controller
 	{
 		$this->load->view('AboutUs');
 	}
+
+	public function DiscoveryBlogs(){
+		$this->load->view('DiscoveryBlogs');
+	}
+
+	public function getDiscoveryBlogs(){
+		$data = $this->MasterModel->_rawQuery('SELECT * FROM blogs where blog_type != 1');
+		$Bdata = array();
+		if ($data->totalCount > 0) {
+			foreach ($data->data as $row) {
+				$row->detail = substr($row->detail, 0, 400) . '...';
+				array_push($Bdata, $row);
+			}
+
+			$response['data'] = $Bdata;
+		} else {
+			$response['data'] = array();
+		}
+		$response['status'] = 200;
+		$response['body'] = "Data Found";
+		echo json_encode($response);
+	}
 }
