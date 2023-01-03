@@ -85,6 +85,17 @@ $this->load->view('_partials/header');
 					</div>
 
 					<div class="form-group">
+						<label for="">Blog Type</label>
+						<select name="blog_type" class="form-control" id="blog_type">
+							<option value="1">Stories</option>
+							<option value="2">Sliders</option>
+							<option value="3" selected>Blogs</option>
+						</select>
+					</div>
+
+
+
+					<div class="form-group">
 						<label>File</label>
 						<input type="file" class="form-control" name="userfile" id="userfile">
 
@@ -107,6 +118,7 @@ $this->load->view('_partials/header');
 <?php
 $this->load->view('_partials/footer');
 ?> 
+<script>var base_url = '<?=base_url()?>';</script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script> 
 </div>
 <script>
@@ -146,10 +158,12 @@ $this->load->view('_partials/footer');
 				$("#updateModal").modal("show");
 				$("#name").val(res.data.name);
 				// $("#description").val(res.data.detail);
+				$("#blog_type").val(res.data.blog_type);
 
 				editor1.setHTMLCode(res.data.detail);
 				if(res.data.image != '' && res.data.image != null){
-					$("#imageDiv").html(`<img src="${baseURL}uploads/${res.data.image}" style="height: 300px;width: 100%;" alt="No Image Found"/>`);
+					console.log(baseURL);
+					$("#imageDiv").html(`<img src="${base_url}uploads/${res.data.image}" style="height: 300px;width: 100%;" alt="No Image Found"/>`);
 				}
 			} else {
 				app.errorToast(res.body);
