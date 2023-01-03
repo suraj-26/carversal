@@ -53,6 +53,8 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+
+//ADMIN
 $route['Admin'] = "Admin/login";
 $route['Dashboard'] = "Admin/index";
 $route['getBlogs'] = "Admin/getBlogs";
@@ -64,7 +66,10 @@ $route['updatePassword'] = "Admin/updatePassword";
 $route['checkLogin'] = "Admin/checkLogin";
 
 
+
+//USERS
 $route['Discover'] = "Welcome/Discover";
 $route['Trending'] = "Welcome/Trending";
-$route['Blogs'] = "Welcome/Blogs";
+$route['Blogs/(:any)'] = "Welcome/Blogs/$1";
+$route['getData'] = "Welcome/getData";
 

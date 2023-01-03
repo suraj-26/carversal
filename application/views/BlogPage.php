@@ -15,12 +15,11 @@
 		<div class="col-md-9 mt-5">
 			<div class="row">
 				<div class="col-md-12 mt-5">
+					<h2 class="BebasFont" id="name"><?=$Data->name?></h2>
 
-					<h2 class="BebasFont">What is the essence of a car and why should you care</h2>
-
-					<p class="RobotoFont">Published on Jul 18, 2021 10:00:00 AM</p>
+					<p class="RobotoFont" id="published_on">Published on <?=$Data->created_on?></p>
 					<div class="">
-						<img src="<?= base_url() ?>assets/CarvesalImage/carImage-16.png" style="border-radius: 8px"
+						<img src="<?= base_url() ?>uploads/<?=$Data->image?>" id="blog_image" style="border-radius: 8px"
 							 class="w-100" alt="">
 						<div class="position-relative">
 							<div class="d-flex position-absolute" style="right: 56px; top: -24px">
@@ -58,10 +57,7 @@
 
 							</div>
 						</div>
-						<p class="FirstLetterBig AliceFont">A car which is used as a means of transport has come a long way. Nicolas-Joseph Cugnot from France was the first person to invent automobile which had three wheels in 1769. It was heavy in size and slow in speed. However, the biggest disadvantage of using steam was that it required water to be brought to a boil in order to start a car. car which is used as a means of transport has come a long way. Nicolas-Joseph Cugnot from France was the first person to invent automobile which had three wheels in 1769. It was heavy in size and slow in speed. However, the biggest disadvantage of using steam was that it required water to be brought to a boil in order to start a car  car which is used as a means of transport has come a long way. Nicolas-Joseph Cugnot from France was the first person to invent automobile which had three wheels in 1769. It was heavy in size and slow in speed. However, the biggest disadvantage of using steam was that it required water to be brought to a boil in order to start a car.
-						</p>
-
-
+						<p class="FirstLetterBig AliceFont" id="description"><?=$Data->detail?></p>
 					</div>
 
 				</div>
@@ -79,23 +75,11 @@
 	</div>
 </div>
 <?php include_once "Footer.php" ?>
-<h1>Blog PAge</h1>
 </body>
 <script>
-
-
 	$('#favorite').click(function () {
-
 		$(this).toggleClass('favoriteBlog');
-		// console.log($(this).toggleClass('favoriteBlog'))
-	})
-	// function AddToFav(id){
-	//
-	// }
+	});
 
 </script>
 </html>
-
-<!--sample comment -->
-<!--sample comment -->
-<!--sample comment -->

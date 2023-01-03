@@ -31,6 +31,9 @@
 			integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
 			crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css" integrity="sha512-O03ntXoVqaGUTAeAmvQ2YSzkCvclZEcPQu1eqloPaHfJ5RuNGiS4l+3duaidD801P50J28EHyonCV06CUlTSag=="
+		  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
 	<title>Header</title>
 	<style>
@@ -89,6 +92,8 @@
 	// menu javascript
 
 
+
 </script>
+<script>var base_url = '<?=base_url()?>';</script>
 </body>
 </html>
