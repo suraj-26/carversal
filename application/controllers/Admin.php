@@ -103,6 +103,7 @@ class Admin extends CI_Controller
 		$name = $this->input->post('name');
 		$description = $this->input->post('description');
 		$id = $this->input->post('update_id');
+		$blog_type = $this->input->post('blog_type');
 		if ($name != null && $name != '' && $description != null && $description != '') {
 
 			$imageFile = $this->MasterModel->upload_file('uploads');
@@ -112,7 +113,8 @@ class Admin extends CI_Controller
 				$data = array(
 					'name' => $name,
 					'detail' => $description,
-					'updated_on' => date('Y-m-d H:i:s')
+					'updated_on' => date('Y-m-d H:i:s'),
+					'blog_type' => $blog_type
 				);
 
 				if($imageFile['status'] === 200) {
@@ -131,7 +133,8 @@ class Admin extends CI_Controller
 				$data = array(
 					'name' => $name,
 					'detail' => $description,
-					'created_by' => $this->session->user_session->id
+					'created_by' => $this->session->user_session->id,
+					'blog_type' => $blog_type
 				);
 
 				if($imageFile['status'] === 200) {
