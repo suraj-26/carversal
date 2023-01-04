@@ -73,5 +73,7 @@ $route['Trending'] = "Welcome/Trending";
 $route['AboutUs'] = "Welcome/AboutUs";
 $route['Blogs/(:any)'] = "Welcome/Blogs/$1";
 $route['getData'] = "Welcome/getData";
+$route['Login'] = "Welcome/Login";
+$route['Register'] = "Welcome/Register";
 
 
