@@ -23,9 +23,15 @@
 							 class="w-100" alt="">
 						<div class="position-relative">
 							<div class="d-flex position-absolute" style="right: 56px; top: -24px">
+								<?php
+								$url = "http://";
+								$url.= $_SERVER['HTTP_HOST'];
+								$url.= $_SERVER['REQUEST_URI'];
+								?>
+
 								<div class="align-items-center bg-white border  d-flex justify-content-around rounded-circle text-secondary"
 									 style="width: 40px;height: 40px;font-size: x-large;box-shadow: 0px 1px 4px 0px #6c757d ;">
-									<i class="fa-sharp fa-solid fa-share"></i>
+									<a href="https://web.whatsapp.com/send?text=<?=$url?>" target="_blank" data-action="share/whatsapp/share"><i class="fa-sharp fa-solid fa-share"></i></a>
 								</div>
 								<?php
 								$is_fav = '';
@@ -99,6 +105,5 @@
 			}
 		}).catch(error=>console.log(error));
 	});
-
 </script>
 </html>
