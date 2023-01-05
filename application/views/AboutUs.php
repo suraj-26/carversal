@@ -188,6 +188,9 @@
 			</form>
 		</div>
 		<div class="col-md-6">
+			<h3 class="RobotoFont">Get in touch </h3>
+			<a href="tomail:Serialkissersuresh@hotmale">Serialkissersuresh@hotmale <span><i class="fa-duotone fa-copy"></i></span></a>
+			<a href="tel:+91 123 456 789">+91 123 456 789 <span><i class="fa-duotone fa-copy"></i></span></a>
 			<h1 class="BebasFont text-capitalize aboutPAgeHeading" style="font-size: 3.5rem">Our priority</h1>
 			<p class="AliceFont FirstLetterBig">A car which is used as a means of transport has come a long way.
 				Nicolas-Joseph Cugnot from France was the first person to invent automobile which had three wheels in
