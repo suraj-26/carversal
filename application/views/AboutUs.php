@@ -203,7 +203,6 @@
 	</div>
 
 </div>
-About us
 <?php include_once "footer.php" ?>
 
 </body>

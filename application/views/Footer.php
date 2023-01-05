@@ -31,7 +31,7 @@
 			<div class="col-md-4">
 				<ul class="list-unstyled">
 					<li><h5>Company</h5></li>
-					<li><h6>About Us </h6></li>
+					<li><a style="text-decoration: none;color: white" href="<?=base_url()?>AboutUs"><h6>About Us</h6></a></li>
 					<li><h6>Work with us</h6></li>
 					<li><h6>Privacy Policy</h6></li>
 				</ul>
@@ -40,10 +40,10 @@
 			<div class="col-md-4">
 				<ul class="list-unstyled">
 					<li><h5>Page</h5></li>
-					<li><h6>Home </h6></li>
-					<li><h6>Discover 	</h6></li>
-					<li><h6>Latest</h6></li>
-					<li><h6>Popular</h6></li>
+					<li><a style="text-decoration: none;color: white" href="<?=base_url()?>"><h6>Home </h6></li>
+					<li><a style="text-decoration: none;color: white" href="<?=base_url()?>Discover"><h6>Discover</h6></a></li>
+					<li><a  style="text-decoration: none;color: white" href="<?=base_url()?>Latest"><h6>Latest</h6></a></li>
+					<li><a style="text-decoration: none;color: white" href="<?=base_url()?>Popular"><h6>Popular</h6></a></li>
 				</ul>
 
 			</div>

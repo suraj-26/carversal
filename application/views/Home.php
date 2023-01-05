@@ -258,7 +258,7 @@
 					</div>
 					</div>
 					`;
-				}else{
+				}
 					html += `
 				<div class="col-md-4 mt-5">
 					<div class="">
@@ -270,7 +270,7 @@
 					</div>
 				</div>
 				`;
-				}
+
 			});
 			$("#CarDetailsCards").html(html);
 			$("#PostDiv").html(html2);
