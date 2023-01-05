@@ -25,7 +25,7 @@ class Admin extends CI_Controller
 		$email = $this->input->post('email');
 		$password = $this->input->post('password');
 		if($email != null && $email != '' && $password != null && $password != ''){
-			$checkLogin = $this->MasterModel->_select('employee',array('email' => $email,'password' => $password),'*',true);
+			$checkLogin = $this->MasterModel->_select('employee',array('email' => $email,'password' => $password,'type' => 1),'*',true);
 			if($checkLogin->totalCount > 0){
 				$this->session->user_session = $checkLogin->data;
 				$response['status'] = 200;

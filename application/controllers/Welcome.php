@@ -66,12 +66,21 @@ class Welcome extends CI_Controller
 	{
 		$arr = array();
 		$data = $this->MasterModel->_select('blogs', array('id' => $id), '*', true);
+		$is_fav = 0;
+		if($this->session->user_session) {
+			$user_id = $this->session->user_session->id;
+			$getFav = $this->MasterModel->_select('user_fav',array('user_id' => $user_id,'blog_id' => $id),'*',true);
+			if($getFav->totalCount > 0){
+				$is_fav = 1;
+			}
+		}
+
 		if ($data->totalCount > 0) {
 			$blogs = $data->data;
 			$date = $blogs->created_on;
 			$date = date("F jS, Y h:i:s a", strtotime($date));
 			$blogs->created_on = $date;
-
+			$blogs->is_fav = $is_fav;
 			$arr = $blogs;
 		}
 		$date = date("Y-m-d h:i:s");
@@ -128,7 +137,7 @@ class Welcome extends CI_Controller
 	public function Register()
 	{
 		$this->load->view('Register');
-
+	}
 
 	public function DiscoveryBlogs($type){
 		$this->load->view('DiscoveryBlogs',array('type' => $type));
@@ -188,5 +197,100 @@ class Welcome extends CI_Controller
 		$response['body'] = "Data Found";
 
 		echo json_encode($response);
+	}
+
+	public function checkUserLogin(){
+		$email = $this->input->post('username');
+		$password = $this->input->post('password');
+		if($email != null && $email != '' && $password != null && $password != ''){
+			$checkLogin = $this->MasterModel->_select('employee',array('email' => $email,'password' => $password,'type' => 2),'*',true);
+			if($checkLogin->totalCount > 0){
+				$this->session->user_session = $checkLogin->data;
+				$response['status'] = 200;
+				$response['body'] = 'Login Successfull';
+			}else{
+				$response['status'] = 201;
+				$response['body'] = "Incorrect Email or Password";
+			}
+		}else{
+			$response['status'] = 201;
+			$response['body'] = 'Required Parameter Missing';
+		} echo json_encode($response);
+	}
+
+	public function changeStatus(){
+		$is_fav = $this->input->post('is_fav');
+		$blog_id = $this->input->post('blog_id');
+		if($this->session->user_session){
+
+			$user_id = $this->session->user_session->id;
+			$checkifE = $this->MasterModel->_select('user_fav',array('user_id' => $user_id,'blog_id' => $blog_id),'*',true);
+			if($checkifE->totalCount > 0){
+				$update = $this->MasterModel->_delete('user_fav',array('user_id' => $user_id,'blog_id' => $blog_id));
+			}else{
+				$update = $this->MasterModel->_insert('user_fav',array('user_id' => $user_id,'blog_id' => $blog_id));
+			}
+
+			$response['status'] = 200;
+			$response['body'] = "Updated Successfully";
+
+		}else{
+			$response['status'] = 201;
+			$response['body'] = "You need to Login First";
+ 		} echo json_encode($response);
+	}
+
+	public function RegisterUser(){
+		$email = $this->input->post('email');
+		$username = $this->input->post('username');
+		$password = $this->input->post('password');
+
+		if($email != null && $email != '' && $username != null && $username != '' && $password != '' && $password != ''){
+
+			$userData = $this->MasterModel->_insert('employee',
+				array('username' => $username,'email'=> $email,'password' => $password,'status' =>1,'type' => 2,'created_on' => date('Y-m-d h:i:s')));
+			if($userData->status){
+				$response['status'] = 200;
+				$response['body'] = "Registered Successfully";
+			}else{
+				$response['status'] = 201;
+				$response['body'] = "Something Went Wrong";
+			}
+		} else {
+			$response['status'] = 201;
+			$response['body'] = "Fill all the Details";
+		}
+		echo json_encode($response);
+
+	}
+
+
+	public function AddContactUs(){
+		$email = $this->input->post('email');
+		$username = $this->input->post('username');
+		$message = $this->input->post('userMessage');
+
+		if($email != null && $email != '' && $username != null && $username != '' && $message != '' && $message != ''){
+
+			$userData = $this->MasterModel->_insert('contact_us',
+				array('name' => $username,'email'=> $email,'message' => $message));
+			if($userData->status){
+				$response['status'] = 200;
+				$response['body'] = "Successfull";
+			}else{
+				$response['status'] = 201;
+				$response['body'] = "Something Went Wrong";
+			}
+		} else {
+			$response['status'] = 201;
+			$response['body'] = "Fill all the Details";
+		}
+		echo json_encode($response);
+
+	}
+
+	public function logout(){
+		session_destroy();
+		redirect('/');
 	}
 }
