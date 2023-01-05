@@ -33,7 +33,7 @@
 
 	<!--	2nd car corousel -->
 
-	<div class="row PoppinsFont " style="font-weight: 700 !important;">
+	<div class="row PoppinsFont d-none d-md-block " style="font-weight: 700 !important;">
 		<div class="col-12">
 			<div class="owl-carousel HomeCarouselTwo  owl-theme" id="SecondCarCarousel">
 			</div>
@@ -81,10 +81,10 @@
 			margin: 10,
 			dots: false,
 			nav: false,
-			navText: ['<button type="button" class="btn slider-left-btn" style="visibility: hidden"> </button>', '<button type="button" class="bg-white btn p-0 slider-left-btn" style="font-size: xx-large;position: absolute; right: -64px; top: 40%;box-shadow: unset;"> <span><i class="fa-solid fa-arrow-right"></i></span> </button>'],
+			navText: ['<button type="button" class="btn slider-left-btn" style="visibility: hidden"> </button>', '<button type="button" class="bg-white btn p-0 slider-left-btn d-none d-md-block" style="font-size: xx-large;position: absolute; right: -64px; top: 40%;box-shadow: unset;"> <span><i class="fa-solid fa-arrow-right"></i></span> </button>'],
 			responsive: {
 				0: {
-					items: 1
+					items: 2
 				},
 				600: {
 					items: 2
@@ -151,7 +151,7 @@
 						<img src="${base_url}uploads/${e.image}" style="border-radius: 8px"
 						 class="w-100" alt="">
 						</div>
-						<h3 class="carouselImageText">${e.name}</h3>
+						<h4 class="carouselImageText">${e.name}</h4>
 						</div>
 						`;
 			});
@@ -172,7 +172,7 @@
 				html += `
 				<div class="item RobotoFont">
 					<div class="">
-						<img src="${base_url}uploads/${e.image}"  height="500" style="border-radius: 8px"
+						<img src="${base_url}uploads/${e.image}"   style="border-radius: 8px; height: 400px"
 							 class="w-100" alt="">
 					</div>
 					<div class="CarouselTwoContent text-center">

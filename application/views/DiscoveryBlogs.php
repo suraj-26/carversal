@@ -33,11 +33,11 @@
 			let data = res.data;
 			data.map(e=>{
 			html += `<div class="row my-4 boxShadow" style="border-radius: 8px">
-				<div class="col-md-6">
-				<img src="${base_url}uploads/${e.image}" height="300" style="border-radius: 8px"
+				<div class="col-md-5">
+				<img src="${base_url}uploads/${e.image}"  style="border-radius: 8px"
 				 class="w-100" alt="">
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-7">
 				<div class="align-items-baseline d-flex flex-column h-100 justify-content-between">
 				<div class="">
 				<h1 class="BebasFont">${e.name}</h1>

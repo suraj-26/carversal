@@ -168,41 +168,50 @@
 	<div class="text-center py-5	">
 		<h1 class="BebasFont text-capitalize aboutPAgeHeading" style="font-size: 3.5rem">Contact us</h1>
 	</div>
-	<div class="row mt-5">
+	<div class="row mt-5 justify-content-between">
 		<div class="col-md-6">
 			<h3 class="RobotoFont">Get in touch </h3>
-			<form id="contact_us" class="RobotoFont w-75">
+			<form id="contact_us" class="RobotoFont">
 				<div class="field mb-1">
-					<input type="text" class="contactInput " name="username" id="username" placeholder="Jane Appleseed">
+					<input type="text" class="contactInput " name="username" id="username" placeholder="Your Name">
 					<label for="username" class="small text-muted mb-0">Your Name</label>
 				</div>
 
 				<div class="field mb-1 ">
-					<input type="email" class="contactInput" name="email" id="email" placeholder="jane.appleseed@example.com">
+					<input type="email" class="contactInput" name="email" id="email" placeholder="YourEmail@gmail.com">
 					<label for="email" class="small text-muted mb-0">Email</label>
 				</div>
 				<div class="field mb-1">
-					<textarea type="text" class="contactInput" rows="1" name="userMessage" id="userMessage" placeholder="jane.appleseed@example.com"></textarea>
+					<textarea type="text" class="contactInput" rows="1" name="userMessage" id="userMessage" placeholder="Type your meassage..."></textarea>
 					<label for="userMessage" class=" small text-muted mb-0">Your message</label>
 				</div>
 			</form>
 			<div class="submit_btn my-4 text-center">
-				<button type="button" class="PoppinsFont btn font-weight-light px-4 text-light" onclick="CheckLogin('contact_us')" style="
+				<button type="button" class="PoppinsFont btn font-weight-light px-4 text-light" style="background: var(--BlueColor); border-radius: 3rem" onclick="CheckLogin('contact_us')" style="
     border-radius: 3rem;color: black;
 "><b>Submit</b></button>
 			</div>
 		</div>
-		<div class="col-md-6">
+		<div class="col-md-5 ">
 			<h3 class="RobotoFont">Get in touch </h3>
-			<a href="tomail:Serialkissersuresh@hotmale">Serialkissersuresh@hotmale <span><i class="fa-duotone fa-copy"></i></span></a>
-			<a href="tel:+91 123 456 789">+91 123 456 789 <span><i class="fa-duotone fa-copy"></i></span></a>
-			<h1 class="BebasFont text-capitalize aboutPAgeHeading" style="font-size: 3.5rem">Our priority</h1>
-			<p class="AliceFont FirstLetterBig">A car which is used as a means of transport has come a long way.
-				Nicolas-Joseph Cugnot from France was the first person to invent automobile which had three wheels in
-				1769. It was heavy in size and slow in speed. However, the biggest disadvantage of using steam was that
-				it required water to be brought to a boil in order to start a car. car which is used as a means of
-				transport has come a long way. Nicolas-Joseph Cugnot from France was the first person to invent
-				automobile which had three wheels in 1769. It was heavy in size and slow in speed. However</p>
+			<div class="">
+				<a href="mailto:Serialkissersuresh@hotmale" class="mailCAll mr-2 text-muted" style='    text-decoration: none;'>Serialkissersuresh@hotmale </a>
+
+				<span style="cursor: pointer" ><i class="fa-regular fa-copy"></i></span>
+			</div>
+			<div class="">
+				<a href="tel:+91 123 456 789" class="mailCAll mr-2 text-muted" style='    text-decoration: none;'>+91 123 456 789 </a>
+				<span style="cursor: pointer"><i class="fa-solid fa-phone"></i></span>
+			</div>
+			<h3 class="RobotoFont mt-5">Follow us on </h3>
+			<div class=" socialIcons" style=" font-size: larger;">
+				<a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+				<a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+				<a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+				<a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+
+			</div>
+
 		</div>
 
 	</div>

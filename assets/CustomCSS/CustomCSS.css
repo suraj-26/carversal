@@ -67,7 +67,8 @@ p{
 	border: 1px solid var(--BlueColor);
 	background: var(--BlueColor);
 	border-radius: 10rem;
-	padding: 0.6rem 0.6rem;
+	padding: 0.19rem 0.6rem;
+	color: white !important;
 }
 
 .ActiveMenu a{
@@ -131,6 +132,9 @@ carouselOneSlideBtn {
 .TextOverflowFourLine{
 	-webkit-line-clamp: 4;
 }
+.HeadingOverflowTwoLine{
+	-webkit-line-clamp: 4;
+}
 .socialIcons a{
 	margin: .25rem .5rem;
 }
@@ -162,9 +166,28 @@ carouselOneSlideBtn {
 	margin-bottom: 0;
 	text-align: center;
 }
+#CarversalMenu li a{
+	text-decoration: none;
+}
+#CarversalMenu li a:hover{
+	text-decoration: none !important;
+}
+.HeaderBorder li a {
+
+	color: black;
+}
 
 /*FillBuleButton;*/
 
 /*BorderBlueSmallButton;*/
 /*BorderBlackButton;*/
+@media only screen and (max-width: 600px) {
+	.HeaderBorder {
+		border-bottom: unset !important;
+	}
+	.HeaderBorder li a {
+		font-weight: bold;
+		color: grey;
+	}
+}
 

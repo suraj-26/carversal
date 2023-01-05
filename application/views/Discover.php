@@ -11,127 +11,145 @@
 <?php include_once "Header.php" ?>
 <div class="container">
 	<!--	card 1-->
-	<?php if(array_key_exists(0,$data)){ ?>
-	<div class="row my-4 boxShadow" style="border-radius: 8px">
-		<div class="col-md-6">
-			<img src="<?= base_url() ?>uploads/<?=$data[0]->image?>" style="border-radius: 8px"
-				 class="w-100" alt="">
-		</div>
-		<div class="col-md-6">
-			<div class="align-items-baseline d-flex flex-column h-100 justify-content-between">
-				<div class="">
-					<h1 class="BebasFont"><?=$data[0]->name?></h1>
-					<p class="AliceFont TextOverflow"><?=$data[0]->detail?></p>
-				</div>
-				<button class="BorderBlueButton btn btn-sm mb-4" onclick="readMore('<?=$data[0]->id?>')" type="button">Read More</button>
+	<?php if (array_key_exists(0, $data)) { ?>
+		<div class="row my-4 boxShadow" style="border-radius: 8px">
+			<div class="col-md-6">
+				<img src="<?= base_url() ?>uploads/<?= $data[0]->image ?>" style="border-radius: 8px"
+					 class="w-100" alt="">
+			</div>
+			<div class="col-md-6">
+				<div class="align-items-baseline d-flex flex-column h-100 justify-content-between">
+					<div class="">
+						<h1 class="BebasFont"><?= $data[0]->name ?></h1>
+						<p class="AliceFont TextOverflow"><?= $data[0]->detail ?></p>
+					</div>
+					<button class="BorderBlueButton btn btn-sm mb-4" onclick="readMore('<?= $data[0]->id ?>')"
+							type="button">Read More
+					</button>
 
+				</div>
 			</div>
 		</div>
-	</div>
 
 	<?php } ?>
 	<!--	cart 2-->
 
-<div class="row">
-	<div class="col-md-7">
+	<div class="row">
+		<div class="col-md-7">
 
 
-		<?php if(array_key_exists(1,$data)){ ?>
-		<div class="row boxShadow mb-4" style="border-radius: 8px">
-			<div class="col-md-5 px-0">
-				<img src="<?= base_url() ?>uploads/<?=$data[1]->image?>" style="border-radius: 8px"
-					 class="w-100" alt="">
-			</div>
-			<div class="col-md-7">
-				<div class="align-items-baseline d-flex flex-column h-100 justify-content-between">
-					<div class="">
-						<h1 class="BebasFont"><?=$data[1]->name?></h1>
-						<p class="AliceFont TextOverflowFourLine"><?=$data[1]->detail?></p>
+			<?php if (array_key_exists(1, $data)) { ?>
+				<div class="row boxShadow mb-4" style="border-radius: 8px">
+					<div class="col-md-5 px-0">
+						<img src="<?= base_url() ?>uploads/<?= $data[1]->image ?>" style="border-radius: 8px"
+							 class="w-100" alt="">
 					</div>
-					<button class="BorderBlueButton btn btn-sm mb-4" onclick="readMore('<?=$data[1]->id?>')" type="button">Read More</button>
+					<div class="col-md-7">
+						<div class="align-items-baseline d-flex flex-column h-100 justify-content-between">
+							<div class="">
+								<h1 class="BebasFont"><?= $data[1]->name ?></h1>
+								<p class="AliceFont TextOverflowFourLine"><?= $data[1]->detail ?></p>
+							</div>
+							<button class="BorderBlueButton btn btn-sm mb-4" onclick="readMore('<?= $data[1]->id ?>')"
+									type="button">Read More
+							</button>
 
-				</div>
-			</div>
-		</div>
-		<?php } ?>
-		<?php if(array_key_exists(2,$data)){ ?>
-		<div class="row ">
-			<div class="col-md-12 mb-4 px-0 boxShadow" style="border-radius: 8px">
-				<img src="<?= base_url() ?>uploads/<?=$data[2]->image?>" style="border-radius: 8px"
-					 class="w-100" alt="">
-
-				<div class="px-3">
-					<h1 class="BebasFont mt-3"><?=$data[2]->name?></h1>
-					<p class="AliceFont TextOverflow"><?=$data[2]->detail?></p>
-					<button class="BorderBlueButton btn btn-sm mb-4" onclick="readMore('<?=$data[2]->id?>')" type="button">Read More</button>
-
-				</div>
-
-			</div>
-		</div>
-		<?php } ?>
-		<div class="row">
-			<?php if(array_key_exists(3,$data)){ ?>
-			<div class="col-md-7 pl-4">
-				<div class="boxShadow" style="border-radius: 8px">
-					<img src="<?= base_url() ?>uploads/<?=$data[3]->image?>" style="border-radius: 8px"
-						 class="w-100" alt="">
-					<div class="px-3">
-						<h1 class="BebasFont mt-3"><?=$data[3]->name?></h1>
-						<p class="AliceFont TextOverflow"><?=$data[3]->detail?></p>
-						<button class="BorderBlueButton btn btn-sm mb-4" onclick="readMore('<?=$data[3]->id?>')" type="button">Read More</button>
-
+						</div>
 					</div>
 				</div>
-			</div>
 			<?php } ?>
-			<div class="align-items-center bg-secondary col-5 d-flex justify-content-around" style="border-radius: 8px;">
-				<h1 class="BebasFont"> AD</h1>
-			</div>
-		</div>
-	</div>
-	<div class="col-md-5">
-		<?php if(array_key_exists(4,$data)){ ?>
-		<div class="row mx-0">
-			<div class="col-md-12 mb-4 px-0 boxShadow" style="border-radius: 8px">
-				<img src="<?= base_url() ?>uploads/<?=$data[4]->image?>" style="border-radius: 8px;height: 341px;"
-					 class="w-100" alt="">
+			<?php if (array_key_exists(2, $data)) { ?>
+				<div class="row ">
+					<div class="col-md-12 mb-4 px-0 boxShadow" style="border-radius: 8px">
+						<img src="<?= base_url() ?>uploads/<?= $data[2]->image ?>" style="border-radius: 8px"
+							 class="w-100" alt="">
 
-				<div class="px-3">
-					<h1 class="BebasFont mt-3"><?=$data[4]->name?></h1>
-					<p class="AliceFont TextOverflowFourLine"><?=$data[4]->detail?></p>
-					<button class="BorderBlueButton btn btn-sm mb-4" onclick="readMore('<?=$data[4]->id?>')" type="button">Read More</button>
+						<div class="px-3">
+							<h1 class="BebasFont mt-3"><?= $data[2]->name ?></h1>
+							<p class="AliceFont TextOverflow"><?= $data[2]->detail ?></p>
+							<button class="BorderBlueButton btn btn-sm mb-4" onclick="readMore('<?= $data[2]->id ?>')"
+									type="button">Read More
+							</button>
 
+						</div>
+
+					</div>
 				</div>
+			<?php } ?>
+			<div class="row">
+				<?php if (array_key_exists(3, $data)) { ?>
+					<div class="col-md-7 pl-4">
+						<div class="boxShadow" style="border-radius: 8px">
+							<img src="<?= base_url() ?>uploads/<?= $data[3]->image ?>" style="border-radius: 8px"
+								 class="w-100" alt="">
+							<div class="px-3">
+								<h1 class="BebasFont mt-3"><?= $data[3]->name ?></h1>
+								<p class="AliceFont TextOverflow"><?= $data[3]->detail ?></p>
+								<button class="BorderBlueButton btn btn-sm mb-4"
+										onclick="readMore('<?= $data[3]->id ?>')" type="button">Read More
+								</button>
 
-			</div>
-		</div>
-		<?php } ?>
-		<?php if(array_key_exists(5,$data)){ ?>
-		<div class="row mx-0">
-			<div class="col-md-12 mb-4 px-0 boxShadow" style="border-radius: 8px;">
-				<img src="<?= base_url() ?>uploads/<?=$data[5]->image?>" style="border-radius: 8px;height: 416px;"
-					 class="w-100" alt="">
-
-				<div class="px-3">
-					<h1 class="BebasFont mt-3"><?=$data[5]->name?></h1>
-					<p class="AliceFont TextOverflowFourLine"><?=$data[5]->detail ?></p>
-					<button class="BorderBlueButton btn btn-sm mb-4" onclick="readMore('<?=$data[5]->id?>')" type="button">Read More</button>
-
+							</div>
+						</div>
+					</div>
+				<?php } ?>
+				<div class="align-items-center bg-secondary col-5 d-flex justify-content-around"
+					 style="border-radius: 8px;">
+					<h1 class="BebasFont"> AD</h1>
 				</div>
-
 			</div>
 		</div>
-		<?php } ?>
-		<div class="align-items-center bg-secondary d-flex justify-content-around mx-0 row" style="border-radius: 8px;">
-			<h1 class="BebasFont py-5"> AD</h1>
+		<div class="col-md-5">
+			<?php if (array_key_exists(4, $data)) { ?>
+				<div class="row mx-0">
+					<div class="col-md-12 mb-4 px-0 boxShadow" style="border-radius: 8px">
+						<img src="<?= base_url() ?>uploads/<?= $data[4]->image ?>"
+							 style="border-radius: 8px;height: 341px;"
+							 class="w-100" alt="">
+
+						<div class="px-3">
+							<h1 class="BebasFont mt-3"><?= $data[4]->name ?></h1>
+							<p class="AliceFont TextOverflowFourLine"><?= $data[4]->detail ?></p>
+							<button class="BorderBlueButton btn btn-sm mb-4" onclick="readMore('<?= $data[4]->id ?>')"
+									type="button">Read More
+							</button>
+
+						</div>
+
+					</div>
+				</div>
+			<?php } ?>
+			<?php if (array_key_exists(5, $data)) { ?>
+				<div class="row mx-0">
+					<div class="col-md-12 mb-4 px-0 boxShadow" style="border-radius: 8px;">
+						<img src="<?= base_url() ?>uploads/<?= $data[5]->image ?>"
+							 style="border-radius: 8px;height: 416px;"
+							 class="w-100" alt="">
+
+						<div class="px-3">
+							<h1 class="BebasFont mt-3"><?= $data[5]->name ?></h1>
+							<p class="AliceFont TextOverflowFourLine"><?= $data[5]->detail ?></p>
+							<button class="BorderBlueButton btn btn-sm mb-4" onclick="readMore('<?= $data[5]->id ?>')"
+									type="button">Read More
+							</button>
+
+						</div>
+
+					</div>
+				</div>
+			<?php } ?>
+			<div class="align-items-center bg-secondary d-flex justify-content-around mx-0 row"
+				 style="border-radius: 8px;">
+				<h1 class="BebasFont py-5"> AD</h1>
+			</div>
+
+		</div>
+
+		<div class="col-12 mt-5 text-center">
+			<a class="BorderBlueButton btn btn-md" href="<?= base_url() ?>DiscoveryBlogs/1">View More</a>
 		</div>
 
 	</div>
-	<div class="align-items-center d-flex justify-content-around mx-0 row">
-		<a class="BorderBlueButton btn btn-md" href="<?=base_url()?>DiscoveryBlogs/1">View More</a>
-	</div>
-</div>
 
 
 </div>
@@ -141,7 +159,7 @@
 
 <script>
 	function readMore(id) {
-		location.href = base_url + 'Blogs/'+ id;
+		location.href = base_url + 'Blogs/' + id;
 	}
 </script>
 </html>

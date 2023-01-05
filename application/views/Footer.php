@@ -32,8 +32,8 @@
 				<ul class="list-unstyled">
 					<li><h5>Company</h5></li>
 					<li><a style="text-decoration: none;color: white" href="<?=base_url()?>AboutUs"><h6>About Us</h6></a></li>
-					<li><h6>Work with us</h6></li>
-					<li><h6>Privacy Policy</h6></li>
+					<li><a style="text-decoration: none;color: white" href="<?=base_url()?>AboutUs"><h6>Work with us</h6></a></li>
+					<li><a style="text-decoration: none;color: white" href="<?=base_url()?>PrivacyPolicy"><h6>Privacy Policy</h6></a></li>
 				</ul>
 
 			</div>

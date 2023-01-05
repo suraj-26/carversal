@@ -49,20 +49,27 @@
 </head>
 <body>
 <div class="container">
-	<div class="PoppinsFont align-items-center border-dark row pt-2" style="border-bottom: 2px solid;">
-		<div class="col-md-3">
+	<div class="PoppinsFont align-items-center border-dark row mx-0 mx-md-3 pt-2 HeaderBorder" style="border-bottom: 2px solid;">
+		<div class="col-md-3 col-6">
 			<h1 class="BebasFont text-capitalize mb-0"> CARVERSAL</h1>
 		</div>
+		<div class="col-6 text-right d-block d-md-none">
+
+				<img src="<?= base_url() ?>/assets/CarvesalImage/User.jpg" class="mr-2 rounded-circle" alt="" style="
+						width: 36px;">
+
+		</div>
+		<div class="col-12 border-bottom d-block d-md-none"></div>
 		<div class="col-md-6">
 			<ul class="align-items-center d-flex justify-content-around list-unstyled mb-0" id="CarversalMenu">
 				<!--menu-->
-				<li class="MenuItems badge-pill px-4 py-1 <?php echo $this->uri->segment(1) == '' ? 'ActiveMenu' : '' ?>"><a style="color: black" href="<?=base_url()?>">Trending</a></li>
-				<li class="MenuItems badge-pill px-4 py-1 <?php echo  $this->uri->segment(1) == 'Discover' ? 'ActiveMenu' : '' ?>"><a style="color: black" href="<?=base_url()?>Discover">Discover</a></li>
-				<li class="MenuItems badge-pill px-4 py-1 <?php echo $this->uri->segment(1) == 'Latest' ? 'ActiveMenu' : '' ?>"><a style="color: black" href="<?=base_url()?>Latest">Latest</a></li>
-				<li class="MenuItems badge-pill px-4 py-1 <?php echo $this->uri->segment(1) == 'Popular' ? 'ActiveMenu' : '' ?>"><a style="color: black" href="<?=base_url()?>Popular">Popular</a></li>
+				<li class="MenuItems badge-pill px-0 mx-md-4 py-md-1 mt-3 "><a  href="<?=base_url()?>" class="<?php echo $this->uri->segment(1) == '' ? 'ActiveMenu' : '' ?>">Trending</a></li>
+				<li class="MenuItems badge-pill px-0 mx-md-4 py-md-1 mt-3 "><a  class="<?php echo  $this->uri->segment(1) == 'Discover' ? 'ActiveMenu' : '' ?>" href="<?=base_url()?>Discover">Discover</a></li>
+				<li class="MenuItems badge-pill px-0 mx-md-4 py-md-1 mt-3 "><a class="<?php echo $this->uri->segment(1) == 'Latest' ? 'ActiveMenu' : '' ?>" href="<?=base_url()?>Latest">Latest</a></li>
+				<li class="MenuItems badge-pill px-0 mx-md-4 py-md-1 mt-3 "><a  class="<?php echo $this->uri->segment(1) == 'Popular' ? 'ActiveMenu' : '' ?>" href="<?=base_url()?>Popular">Popular</a></li>
 			</ul>
 		</div>
-		<div class="col-md-3">
+		<div class="col-md-3 d-none d-md-block">
 			<div class="SearchBar align-items-center align-items-sm-center badge-pill border border-dark d-f d-flex py-1">
 				<span><i class="fa-solid fa-magnifying-glass"></i></span>
 				<input type="search" class="border-0 form-control py-0"

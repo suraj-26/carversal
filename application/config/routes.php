@@ -86,6 +86,7 @@ $route['changeStatus'] = "Welcome/changeStatus";
 $route['RegisterUser'] = "Welcome/RegisterUser";
 $route['logout'] = "Welcome/logout";
 $route['AddContactUs'] = "Welcome/AddContactUs";
+$route['PrivacyPolicy'] = "Welcome/PrivacyPolicy";
 
 
 
