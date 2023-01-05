@@ -171,10 +171,10 @@
 	<div class="row mt-5">
 		<div class="col-md-6">
 			<h3 class="RobotoFont">Get in touch </h3>
-			<form action="" class="RobotoFont w-75">
+			<form id="contact_us" class="RobotoFont w-75">
 				<div class="field mb-1">
-					<input type="text" class="contactInput " name="fullname" id="fullname" placeholder="Jane Appleseed">
-					<label for="fullname" class="small text-muted mb-0">Your Name</label>
+					<input type="text" class="contactInput " name="username" id="username" placeholder="Jane Appleseed">
+					<label for="username" class="small text-muted mb-0">Your Name</label>
 				</div>
 
 				<div class="field mb-1 ">
@@ -186,6 +186,11 @@
 					<label for="userMessage" class=" small text-muted mb-0">Your message</label>
 				</div>
 			</form>
+			<div class="submit_btn my-4 text-center">
+				<button type="button" class="PoppinsFont btn font-weight-light px-4 text-light" onclick="CheckLogin('contact_us')" style="
+    border-radius: 3rem;color: black;
+"><b>Submit</b></button>
+			</div>
 		</div>
 		<div class="col-md-6">
 			<h3 class="RobotoFont">Get in touch </h3>
@@ -207,3 +212,16 @@
 
 </body>
 </html>
+<script>
+	function CheckLogin(form_id) {
+		let formd = document.getElementById(form_id);
+		let formdata = new FormData(formd);
+		app.request("AddContactUs",formdata).then(res=>{
+			if(res.status === 200){
+				app.successToast(res.body);
+			}else{
+				app.errorToast(res.body);
+			}
+		}).catch(error=>console.log(error));
+	}
+</script>

@@ -146,17 +146,14 @@
 		if (data.length > 0) {
 			data.map(e => {
 				html += `
-				<div class="item RobotoFont">
-				<div class="">
-				<img src="${base_url}uploads/${e.image}" style="border-radius: 8px"
-				 class="w-100" alt="">
-				</div>
-				<div class="CarouselTwoContent text-center">
-				<h3 class="carouselTwoImageText PoppinsFont">${e.name}</h3>
-				<button class="btn btn-sm BorderBlueButton CarouselTwoButtonPosition" onclick="getReads('${e.id}')" type="button">Read More</button>
-				</div>
-				</div>
-				`;
+						<div class="item RobotoFont">
+						<div class="">
+						<img src="${base_url}uploads/${e.image}" style="border-radius: 8px"
+						 class="w-100" alt="">
+						</div>
+						<h3 class="carouselImageText">${e.name}</h3>
+						</div>
+						`;
 			});
 			$("#FirstCarCarousel").html(html);
 
@@ -258,7 +255,7 @@
 					</div>
 					</div>
 					`;
-				}
+				}else{
 					html += `
 				<div class="col-md-4 mt-5">
 					<div class="">
@@ -270,6 +267,8 @@
 					</div>
 				</div>
 				`;
+				}
+
 
 			});
 			$("#CarDetailsCards").html(html);

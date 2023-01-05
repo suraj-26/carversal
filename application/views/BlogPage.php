@@ -16,7 +16,7 @@
 			<div class="row">
 				<div class="col-md-12 mt-5">
 					<h2 class="BebasFont" id="name"><?=$Data->name?></h2>
-
+					<input type="hidden" name="blog_id" id="blog_id" value="<?=$Data->id?>">
 					<p class="RobotoFont" id="published_on">Published on <?=$Data->created_on?></p>
 					<div class="">
 						<img src="<?= base_url() ?>uploads/<?=$Data->image?>" id="blog_image" style="border-radius: 8px"
@@ -27,7 +27,15 @@
 									 style="width: 40px;height: 40px;font-size: x-large;box-shadow: 0px 1px 4px 0px #6c757d ;">
 									<i class="fa-sharp fa-solid fa-share"></i>
 								</div>
-								<div class="align-items-center ml-3 bg-white border  d-flex justify-content-around rounded-circle text-secondary"
+								<?php
+								$is_fav = '';
+								if($Data->is_fav == 1){
+									$is_fav = 'favoriteBlog';
+								}
+								?>
+
+								<div class="align-items-center ml-3 bg-white border
+								d-flex justify-content-around rounded-circle text-secondary <?=$is_fav?>"
 									 id="favorite" style="width: 40px;height: 40px;font-size: x-large;box-shadow: 0px 1px 4px 0px #6c757d ;">
 									<i class="fa-solid fa-heart"></i>
 								</div>
@@ -78,7 +86,18 @@
 </body>
 <script>
 	$('#favorite').click(function () {
-		$(this).toggleClass('favoriteBlog');
+		let is_fav = 0;
+		if($("#favorite").hasClass('favoriteBlog')){
+			is_fav = 1;
+		}
+		let formdata = new FormData();
+		formdata.set('is_fav',is_fav);
+		formdata.set('blog_id',$("#blog_id").val());
+		app.request("changeStatus",formdata).then(res=>{
+			if(res.status=== 200){
+				$(this).toggleClass('favoriteBlog');
+			}
+		}).catch(error=>console.log(error));
 	});
 
 </script>

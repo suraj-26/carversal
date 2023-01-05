@@ -78,6 +78,11 @@ $route['Login'] = "Welcome/Login";
 $route['Register'] = "Welcome/Register";
 $route['DiscoveryBlogs/(:any)'] = "Welcome/DiscoveryBlogs/$1";
 $route['getDiscoveryBlogs'] = "Welcome/getDiscoveryBlogs";
+$route['checkUserLogin'] = "Welcome/checkUserLogin";
+$route['changeStatus'] = "Welcome/changeStatus";
+$route['RegisterUser'] = "Welcome/RegisterUser";
+$route['logout'] = "Welcome/logout";
+$route['AddContactUs'] = "Welcome/AddContactUs";
 
 
 
