@@ -201,7 +201,7 @@ class Admin extends CI_Controller
 	}
 
 	public function contact_us(){
-		$this->load->view('Admin/contact_us');
+		$this->load->view('Admin/contact_us',array('title' => 'Contact US'));
 	}
 
 	public function getContactUSData(){
@@ -234,7 +234,7 @@ class Admin extends CI_Controller
 	}
 
 	public function users(){
-		$this->load->view('Admin/users');
+		$this->load->view('Admin/users',array('title' => 'Users'));
 	}
 
 	public function getUserData(){
