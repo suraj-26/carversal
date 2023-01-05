@@ -121,6 +121,14 @@ class Welcome extends CI_Controller
 	{
 		$this->load->view('AboutUs');
 	}
+	public function Login()
+	{
+		$this->load->view('Login');
+	}
+	public function Register()
+	{
+		$this->load->view('Register');
+
 
 	public function DiscoveryBlogs($type){
 		$this->load->view('DiscoveryBlogs',array('type' => $type));
