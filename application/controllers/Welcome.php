@@ -52,9 +52,14 @@ class Welcome extends CI_Controller
 		$this->load->view('Discover', $response);
 	}
 
-	public function Trending()
+	public function Latest()
 	{
-		$this->load->view('Trending');
+		$this->load->view('Latest');
+	}
+
+	public function Popular()
+	{
+		$this->load->view('Popular');
 	}
 
 	public function Blogs($id)
@@ -81,7 +86,7 @@ class Welcome extends CI_Controller
 	{
 		$data = $this->MasterModel->_rawQuery('SELECT * FROM blogs where blog_type = 1 limit 10');
 		$data3 = $this->MasterModel->_rawQuery('SELECT * FROM blogs where blog_type = 2 limit 10');
-		$data2 = $this->MasterModel->_rawQuery('SELECT * FROM blogs where blog_type = 3 order by read_count desc');
+		$data2 = $this->MasterModel->_rawQuery('SELECT * FROM blogs where blog_type = 3 and last_read between date_sub(now(),INTERVAL 1 WEEK) and now() order by read_count desc');
 		if ($data->totalCount > 0) {
 			$response['data'] = $data->data;
 		} else {
@@ -117,25 +122,63 @@ class Welcome extends CI_Controller
 		$this->load->view('AboutUs');
 	}
 
-	public function DiscoveryBlogs(){
-		$this->load->view('DiscoveryBlogs');
+	public function DiscoveryBlogs($type){
+		$this->load->view('DiscoveryBlogs',array('type' => $type));
 	}
 
 	public function getDiscoveryBlogs(){
-		$data = $this->MasterModel->_rawQuery('SELECT * FROM blogs where blog_type != 1');
-		$Bdata = array();
-		if ($data->totalCount > 0) {
-			foreach ($data->data as $row) {
-				$row->detail = substr($row->detail, 0, 400) . '...';
-				array_push($Bdata, $row);
-			}
+		$type = $this->input->post('type');
 
-			$response['data'] = $Bdata;
+		if($type == 1){
+			$data = $this->MasterModel->_rawQuery('SELECT * FROM blogs where blog_type = 3');
+			$Bdata = array();
+			if ($data->totalCount > 0) {
+				foreach ($data->data as $row) {
+					$row->detail = substr($row->detail, 0, 400) . '...';
+					array_push($Bdata, $row);
+				}
+				shuffle($Bdata);
+				$response['data'] = $Bdata;
+			} else {
+				$response['data'] = array();
+			}
+		} else if ($type == 2){
+			$data = $this->MasterModel->_rawQuery('SELECT * FROM blogs where blog_type = 3 order by id desc');
+			$Bdata = array();
+			if ($data->totalCount > 0) {
+				foreach ($data->data as $row) {
+
+					$date = $row->created_on;
+					$date = date("F jS, Y h:i:s a", strtotime($date));
+					$row->created_on = $date;
+
+					$row->detail = substr($row->detail, 0, 400) . '...';
+					array_push($Bdata, $row);
+				}
+				$response['data'] = $Bdata;
+			} else {
+				$response['data'] = array();
+			}
 		} else {
-			$response['data'] = array();
+			$data = $this->MasterModel->_rawQuery('SELECT * FROM blogs where blog_type = 3 and read_count > 0 order by read_count desc');
+			$Bdata = array();
+			if ($data->totalCount > 0) {
+				foreach ($data->data as $row) {
+					$date = $row->created_on;
+					$date = date("F jS, Y h:i:s a", strtotime($date));
+					$row->created_on = $date;
+
+					$row->detail = substr($row->detail, 0, 400) . '...';
+					array_push($Bdata, $row);
+				}
+				$response['data'] = $Bdata;
+			} else {
+				$response['data'] = array();
+			}
 		}
 		$response['status'] = 200;
 		$response['body'] = "Data Found";
+
 		echo json_encode($response);
 	}
 }

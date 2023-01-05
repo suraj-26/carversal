@@ -5,10 +5,11 @@
 	<meta name="viewport"
 		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Document</title>
+	<title>Discovery Blogs</title>
 </head>
 <body>
 <?php include_once "Header.php" ?>
+<input type="hidden" name="type" id="type" value="<?=$type?>">
 <div class="container" id="discoveryDiv">
 	<!--	card 1-->
 
@@ -16,7 +17,6 @@
 
 <?php include_once "Footer.php" ?>
 </body>
-
 <script>
 
 	$(document).ready(function () {
@@ -24,7 +24,10 @@
 	});
 
 	function getBlogs() {
-		app.request("getDiscoveryBlogs",null).then(res=>{
+
+		let formdata = new FormData();
+		formdata.set('type',$('#type').val());
+		app.request("getDiscoveryBlogs",formdata).then(res=>{
 			let html = '';
 
 			let data = res.data;

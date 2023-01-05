@@ -1,4 +1,3 @@
-const baseURL = '';
 const app = (function () {
 
 		const countries = ['India']

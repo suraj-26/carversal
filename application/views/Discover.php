@@ -5,7 +5,7 @@
 	<meta name="viewport"
 		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Document</title>
+	<title>Discover</title>
 </head>
 <body>
 <?php include_once "Header.php" ?>
@@ -129,7 +129,7 @@
 
 	</div>
 	<div class="align-items-center d-flex justify-content-around mx-0 row">
-		<a class="BorderBlueButton btn btn-md" href="<?=base_url()?>DiscoveryBlogs">View More</a>
+		<a class="BorderBlueButton btn btn-md" href="<?=base_url()?>DiscoveryBlogs/1">View More</a>
 	</div>
 </div>
 

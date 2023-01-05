@@ -40,7 +40,7 @@
 		  crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
 
-	<title>Header</title>
+	<title></title>
 	<style>
 		.form-control:focus {
 			outline: 0;
@@ -58,10 +58,10 @@
 		<div class="col-md-6">
 			<ul class="align-items-center d-flex justify-content-around list-unstyled mb-0" id="CarversalMenu">
 				<!--menu-->
-				<li class="MenuItems badge-pill px-4 py-1 <?php echo $this->uri->segment(1) == '' ? 'ActiveMenu' : '' ?>"><a href="<?=base_url()?>">Trending</a></li>
-				<li class="MenuItems badge-pill px-4 py-1 <?php echo  $this->uri->segment(1) == 'Discover' ? 'ActiveMenu' : '' ?>"><a href="<?=base_url()?>Discover">Discover</a></li>
-				<li class="MenuItems badge-pill px-4 py-1 <?php $this->uri->segment(1) == 'Latest' ? 'ActiveMenu' : '' ?>"><a href="<?=base_url()?>Latest">Latest</a></li>
-				<li class="MenuItems badge-pill px-4 py-1 <?php $this->uri->segment(1) == 'Popular' ? 'ActiveMenu' : '' ?>"><a href="<?=base_url()?>Popular">Popular</a></li>
+				<li class="MenuItems badge-pill px-4 py-1 <?php echo $this->uri->segment(1) == '' ? 'ActiveMenu' : '' ?>"><a style="color: black" href="<?=base_url()?>">Trending</a></li>
+				<li class="MenuItems badge-pill px-4 py-1 <?php echo  $this->uri->segment(1) == 'Discover' ? 'ActiveMenu' : '' ?>"><a style="color: black" href="<?=base_url()?>Discover">Discover</a></li>
+				<li class="MenuItems badge-pill px-4 py-1 <?php echo $this->uri->segment(1) == 'Latest' ? 'ActiveMenu' : '' ?>"><a style="color: black" href="<?=base_url()?>Latest">Latest</a></li>
+				<li class="MenuItems badge-pill px-4 py-1 <?php echo $this->uri->segment(1) == 'Popular' ? 'ActiveMenu' : '' ?>"><a style="color: black" href="<?=base_url()?>Popular">Popular</a></li>
 			</ul>
 		</div>
 		<div class="col-md-3">
@@ -75,34 +75,9 @@
 </div>
 <script>
 
-	// menu javascript
-	// create menu
-	//const HeaderMenu = [{menu: 'Trending', Link: ''}, {menu: 'Discover', Link: 'Discover'}, {
-	//	menu: 'Latest',
-	//	Link: ''
-	//}, {menu: 'Popular', Link: ''}];
-	//MenuList = HeaderMenu.map((menuTitle, index) => {
-	//	<?php //if($this->uri->segment(1) == ?>// menuTitle.Link <?php //) ?>
-	//	return `<li class="MenuItems badge-pill px-4 py-1"><a href="<?//=base_url()?>//${menuTitle.Link}">${menuTitle.menu}</a></li>`;
-	//})
-	//var CarversalMenu = $('#CarversalMenu');
-	//CarversalMenu.append(MenuList);
-	//
-	//var selected_menu = document.querySelectorAll(".MenuItems");
-	//for (let i = 0; i < selected_menu.length; i++) {
-	//	selected_menu[i].addEventListener('click', selectedMenu.bind(this, selected_menu[i]));
-	//}
-	//
-	//function selectedMenu(menu) {
-	//	// console.log(menu)
-	//	$(".MenuItems").removeClass('ActiveMenu badge-pill px-4 py-1');
-	//	$(menu).addClass('ActiveMenu MenuItems badge-pill px-4 py-1');
-	//}
-
-	// menu javascript
-
 
 </script>
 <script>var base_url = '<?=base_url()?>';</script>
+<script>var baseURL = '<?=base_url()?>';</script>
 </body>
 </html>
