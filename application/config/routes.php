@@ -64,7 +64,10 @@ $route['deleteBlog'] = "Admin/deleteBlog";
 $route['ChangePassword'] = "Admin/ChangePassword";
 $route['updatePassword'] = "Admin/updatePassword";
 $route['checkLogin'] = "Admin/checkLogin";
-
+$route['getContactUSData'] = "Admin/getContactUSData";
+$route['contact_us'] = "Admin/contact_us";
+$route['getUserData'] = "Admin/getUserData";
+$route['users'] = "Admin/users";
 
 
 //USERS

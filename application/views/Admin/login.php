@@ -126,7 +126,10 @@
 </div>
 </body>
 </html>
+
+<script>var baseURL='<?=base_url()?>';</script>
 <script>
+
 	const input = document.querySelectorAll('.input');
 
 	function inputFocus() {
