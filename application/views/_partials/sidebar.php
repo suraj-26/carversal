@@ -23,9 +23,21 @@
 						<span>Blogs</span></a></li>
 
 				<li class="menu_list"><a
+							class="menu_list <?php $this->uri->segment(1) == 'users' ? 'active' : '' ?>"
+							href="<?php echo base_url(); ?>users"><i
+								class="fa fa-fw fa-users"></i>
+						<span>Users</span></a></li>
+
+				<li class="menu_list"><a
+							class="menu_list <?php $this->uri->segment(1) == 'contact_us' ? 'active' : '' ?>"
+							href="<?php echo base_url(); ?>contact_us"><i
+								class="fa fa-fw fa-user"></i>
+						<span>Contact US</span></a></li>
+
+				<li class="menu_list"><a
 							class="menu_list <?php $this->uri->segment(1) == 'ChangePassword' ? 'active' : '' ?>"
 							href="<?php echo base_url(); ?>ChangePassword"><i
-								class="fa fa-fw fa-home"></i>
+								class="fa fa-fw fa-key"></i>
 						<span>Change Password</span></a></li>
 
 			</ul>

@@ -129,7 +129,7 @@ $this->load->view('_partials/footer');
 	var editor1 = new RichTextEditor("#description", { editorResizeMode: "height" });
 
 	function getData() {
-		app.request(baseURL + "getBlogs", null).then(res => {
+		app.request("getBlogs", null).then(res => {
 			if (res.status === 200) {
 				$("#Blogs").html('');
 				$("#Blogs").html(res.data);
@@ -151,7 +151,7 @@ $this->load->view('_partials/footer');
 	function editBlogs(id) {
 		let formdata = new FormData();
 		formdata.set('id', id);
-		app.request(baseURL + "getBlogsDetails", formdata).then(res => {
+		app.request("getBlogsDetails", formdata).then(res => {
 			if (res.status === 200) {
 				resetForm('EditBlogs');
 				$("#update_id").val(id);
@@ -162,7 +162,6 @@ $this->load->view('_partials/footer');
 
 				editor1.setHTMLCode(res.data.detail);
 				if(res.data.image != '' && res.data.image != null){
-					console.log(baseURL);
 					$("#imageDiv").html(`<img src="${base_url}uploads/${res.data.image}" style="height: 300px;width: 100%;" alt="No Image Found"/>`);
 				}
 			} else {
@@ -174,7 +173,7 @@ $this->load->view('_partials/footer');
 	function AddBlogData() {
 		let formd = document.getElementById('EditBlogs');
 		let formData = new FormData(formd);
-		app.request(baseURL + "EditBlogs", formData).then(res => {
+		app.request("EditBlogs", formData).then(res => {
 			if (res.status === 200) {
 				app.successToast(res.body);
 				$("#updateModal").modal('hide');

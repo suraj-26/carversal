@@ -122,7 +122,7 @@
 					<li class="dropdown user-box logout" >
 						<a href="" class="dropdown-toggle waves-effect user-link header" style="color: white!important;text-shadow: 0px 1px 2px #00000055; "  data-toggle="dropdown"
 						   aria-expanded="true">
-							<?php echo $this->session->userdata('username'); ?> <i class="fa fa-sort-down"></i>
+							<?php echo $this->session->user_session->username ?> <i class="fa fa-sort-down"></i>
 						</a>
 						<ul class="dropdown-menu dropdown-menu-right arrow-dropdown-menu arrow-menu-right user-list notify-list ">
 							<li><a href="<?php echo base_url(); ?>logout">Logout</a></li>
@@ -143,3 +143,4 @@ $this->load->view('_partials/sidebar_script');
 ?>
 </body>
 </html>
+<script>var baseURL='<?=base_url()?>';</script>

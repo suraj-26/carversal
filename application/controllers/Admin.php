@@ -199,6 +199,72 @@ class Admin extends CI_Controller
 			$response['body'] = "Required Parameter Missing";
 		} echo json_encode($response);
 	}
+
+	public function contact_us(){
+		$this->load->view('Admin/contact_us');
+	}
+
+	public function getContactUSData(){
+		$getBlogs = $this->MasterModel->_rawQuery('select * from contact_us');
+		if ($getBlogs->totalCount > 0) {
+
+			$div = '';
+			$i = 1;
+			foreach ($getBlogs->data as $row) {
+				$div .= "<tr>
+						<td>" . $i . "</td>
+						<td>" . $row->name . "</td>
+						<td>" . $row->email . "</td>
+						<td>" . $row->message . "</td>
+						<td>" . date('F jS, Y', strtotime($row->created_on)) . "</td>
+						</tr>";
+				$i++;
+			}
+
+			$response['status'] = 200;
+			$response['body'] = "Blogs Found";
+			$response['data'] = $div;
+		} else {
+			$div = "<tr>No Data Found</tr>";
+			$response['status'] = 201;
+			$response['body'] = "No Patients Found";
+			$response['data'] = $div;
+		}
+		echo json_encode($response);
+	}
+
+	public function users(){
+		$this->load->view('Admin/users');
+	}
+
+	public function getUserData(){
+		$getBlogs = $this->MasterModel->_rawQuery('select * from employee where type = 2');
+		if ($getBlogs->totalCount > 0) {
+
+			$div = '';
+			$i = 1;
+			foreach ($getBlogs->data as $row) {
+				$div .= "<tr>
+						<td>" . $i . "</td>
+						<td>" . $row->username . "</td>
+						<td>" . $row->email . "</td>
+						<td>" . $row->password . "</td>
+						<td>" . date('F jS, Y', strtotime($row->created_on)) . "</td>
+						</tr>";
+				$i++;
+			}
+
+			$response['status'] = 200;
+			$response['body'] = "Blogs Found";
+			$response['data'] = $div;
+		} else {
+			$div = "<tr>No Data Found</tr>";
+			$response['status'] = 201;
+			$response['body'] = "No Patients Found";
+			$response['data'] = $div;
+		}
+		echo json_encode($response);
+	}
 }
 
 ?>
