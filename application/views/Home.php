@@ -168,7 +168,7 @@
 		let html2 = '';
 		let cnt = 0;
 		if (data.length > 0) {
-			data.map((e,index) => {
+			data.map((e, index) => {
 				html += `
 				<div class="item RobotoFont">
 					<div class="">
@@ -183,9 +183,28 @@
 				</div>
 				`;
 
-				if(cnt < 3) {
+				if (cnt < 3) {
 
-					html2 += `<div class="col-md-4">
+					html2 += `
+<!--<div class="row">
+<div class="col-4">
+<img src="${base_url}uploads/${e.image}" style="border-radius: 8px"
+     class="w-100" alt="">
+</div>
+<div class="col-8">
+<span class="PoppinsFont mt-2"> <b>Opinion : </b>${e.name}</span>
+</div>
+<div class="col-md-4">
+    <div class="">
+
+    <h4 class=" font-weight-bold "></h4>
+    <p class="AliceFont mt-3 TextOverflow">${e.detail}</p>
+    <button class="btn btn-sm LinkBlueButton" onclick="getReads('${e.id}')" type="button">READ MORE <span><i
+    class="fa-solid fa-arrow-right"></i></span></button>
+    </div>
+    </div>
+</div> -->
+<div class="col-md-4">
 				<div class="">
 				<img src="${base_url}uploads/${e.image}" style="border-radius: 8px"
 				 class="w-100" alt="">
@@ -211,9 +230,9 @@
 		let html = '';
 		let html2 = '';
 		if (data.length > 0) {
-			data.map((e,index) => {
+			data.map((e, index) => {
 
-				if(index == 2 || index == 6){
+				if (index == 2 || index == 6) {
 					html += `
 <div class="col-md-4 mt-5">
 <div class="align-items-center bg-secondary d-flex h-100 justify-content-around" style="
@@ -226,38 +245,43 @@
 					html2 += `
 					<div class="col-12">
 					<div class="row py-4">
-					<div class="col-md-3">
+					<div class="col-5 col-md-3 pr-0 pr-md-3">
 					<img src="${base_url}uploads/${e.image}" style="border-radius: 8px"
 					 class="w-100" alt="">
 					</div>
-					<div class="col-md-9 d-flex flex-column justify-content-around">
-					<div class="">
+					<div class="col-md-9 col-7 d-flex flex-column justify-content-around">
+					<div class="d-block d-md-none">
+					<span><b>Opinion:</b> Are digital cockpits bad for data privacy?</span>
+					<div class="d-flex"><span class="mr-2"><i class="fa-regular fa-clock"></i></span><p class="mb-0">7 hours ago</p></div>
+					<div class="d-flex"><span class="mr-2"><i class="fa-solid fa-book-open"></i></span><p class="mb-0">10 Min Read</p></div>
+					</div>
+					<div class="d-none d-md-block">
 					<h3 class="PoppinsFont " style="font-weight: 600;">${e.name}</h3>
 					<p class="AliceFont text-muted TextOverflowFourLine">${e.detail}</p>
 					</div>
-					<div class="align-items-center d-flex justify-content-between">
-					<div class="align-items-center d-flex">
-					<img src="<?= base_url() ?>/assets/CarvesalImage/User.jpg"
-					 class="mr-2 rounded-circle" alt="" style="
-						width: 36px;
-					">
-					<h6 class="AliceFont mb-0">Malay Panday</h6>
-					</div>
-					<div class="align-items-center d-flex">
-					<span style="
-						font-size: x-large;
-					" class="mr-2"><i class="fa-solid fa-book-open"></i></span>
-					<h6 class="RobotoFont mb-0">Published on ${e.created_on}</h6>
-					</div>
-					<h6 class="AliceFont mb-0">10 min read</h6>
-					</div>
+					<div class="d-none d-md-block">
+
+<div class="align-items-center d-flex justify-content-between">
+            <div class="align-items-center d-flex">
+              <img src="<?= base_url() ?>/assets/CarvesalImage/User.jpg" class="mr-2 rounded-circle" alt="" style="width: 36px;">
+              <h6 class="AliceFont mb-0">Malay Panday</h6>
+            </div>
+            <div class="align-items-center d-flex">
+              <span style="
+                font-size: x-large;
+              " class="mr-2"><i class="fa-solid fa-book-open"></i></span>
+              <h6 class="RobotoFont mb-0">Published on ${e.created_on}</h6>
+            </div>
+            <h6 class="AliceFont mb-0">10 min read</h6>
+          </div>
+</div>
 					</div>
 					</div>
 					</div>
 					`;
-				}else{
+				} else {
 					html += `
-				<div class="col-md-4 mt-5">
+				<div class="col-md-4 mt-md-5 mb-4">
 					<div class="">
 						<img src="${base_url}uploads/${e.image}" style="border-radius: 8px"
 							 class="w-100" alt="">
