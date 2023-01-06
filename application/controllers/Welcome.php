@@ -130,6 +130,10 @@ class Welcome extends CI_Controller
 	{
 		$this->load->view('AboutUs');
 	}
+	public function PrivacyPolicy()
+	{
+		$this->load->view('PrivacyPolicy');
+	}
 	public function Login()
 	{
 		$this->load->view('Login');
