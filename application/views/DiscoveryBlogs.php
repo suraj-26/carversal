@@ -10,7 +10,7 @@
 <body>
 <?php include_once "Header.php" ?>
 <input type="hidden" name="type" id="type" value="<?=$type?>">
-<div class="container" id="discoveryDiv">
+<div class="container search_results" id="discoveryDiv">
 	<!--	card 1-->
 
 </div>

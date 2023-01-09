@@ -126,7 +126,7 @@
 				<i class="fa-left-long fa-solid mr-2 d-block d-md-none" id="HideSearch" style="font-size: x-large;"></i>
 				<div class="SearchBar align-items-center align-items-sm-center w-100 badge-pill border border-dark d-f d-flex py-1">
 					<span onclick="search(document.getElementById('search').value)"><i class="fa-solid fa-magnifying-glass"></i></span>
-					<input type="search" id="search" class="border-0 form-control py-0 bg-transparent"
+					<input type="search" id="filter" class="border-0 form-control py-0 bg-transparent"
 						   style="font-size: small; box-shadow: none !important;" placeholder="Search">
 				</div>
 			</div>
@@ -212,3 +212,28 @@
 <script>var baseURL = '<?=base_url()?>';</script>
 </body>
 </html>
+<script>
+	$("#filter").keyup(function() {
+
+		// Retrieve the input field text and reset the count to zero
+		var filter = $(this).val(),
+				count = 0;
+
+		// Loop through the comment list
+		$('.search_results div').each(function() {
+
+
+			// If the list item does not contain the text phrase fade it out
+			if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+				$(this).hide();  // MY CHANGE
+
+				// Show the list item if the phrase matches and increase the count by 1
+			} else {
+				$(this).show(); // MY CHANGE
+				count++;
+			}
+
+		});
+
+	});
+</script>
