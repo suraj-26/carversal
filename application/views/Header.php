@@ -40,6 +40,10 @@
 		  crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
 
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+			integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+
 	<title></title>
 	<style>
 		.form-control:focus {
@@ -80,11 +84,11 @@
 							href="<?= base_url() ?>Popular">Popular</a></li>
 				<?php
 				if (isset($this->session->user_session)) {
-					$username = $this->session->user_session->name;
+					$username = $this->session->user_session->username;
 					?>
 					<a  style="text-decoration: none;" class="pt-1">
 						<div class="dropdown show">
-							<a class="btn btn-sm  dropdown-toggle " style="color: #454545" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><b><?php echo $this->session->user_session->name;?></b></a>
+							<a class="btn btn-sm  dropdown-toggle " style="color: #454545" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><b><?php echo $this->session->user_session->username;?></b></a>
 
 							<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 								<a href="<?=base_url('logout')?>" class="dropdown-item" href="#">Logout</a>
@@ -96,7 +100,7 @@
 					<?php
 				} else { ?>
 					<a href="<?=base_url('Login')?>" style="text-decoration: none;" class="pt-1">
-						<li class="login_row_list px-3">Login/Sign up</li>
+						<li class="login_row_list px-0 mx-md-2 py-md-1 mt-3 mt-md-0">Login</li>
 					</a>
 				<?php }
 				?>
