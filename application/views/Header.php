@@ -88,7 +88,7 @@
 					?>
 					<a  style="text-decoration: none;" class="pt-1">
 						<div class="dropdown show">
-							<a class="btn btn-sm  dropdown-toggle " style="color: #454545" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><b><?php echo $this->session->user_session->username;?></b></a>
+							<a class="btn btn-sm  dropdown-toggle " style="color: #454545" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><b><?php echo $username;?></b></a>
 
 							<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 								<a href="<?=base_url('logout')?>" class="dropdown-item" href="#">Logout</a>
