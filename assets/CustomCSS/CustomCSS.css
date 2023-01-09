@@ -222,6 +222,9 @@ a{
 	.moreLink span{
 		font-size: larger !important;
 	}
+	slider-left-btn{
+		display: none !important;
+	}
 }
 
 
