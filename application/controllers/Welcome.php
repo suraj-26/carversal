@@ -65,8 +65,9 @@ class Welcome extends CI_Controller
 	public function Blogs($id)
 	{
 		$arr = array();
-		$data = $this->MasterModel->_select('blogs', array('id' => $id), '*', true);
+		$data = $this->MasterModel->_select('blogs b', array('id' => $id), '*,(select count(id) from user_fav where blog_id =b.id) as fav_count', true);
 		$is_fav = 0;
+		$count = 0;
 		if($this->session->user_session) {
 			$user_id = $this->session->user_session->id;
 			$getFav = $this->MasterModel->_select('user_fav',array('user_id' => $user_id,'blog_id' => $id),'*',true);
