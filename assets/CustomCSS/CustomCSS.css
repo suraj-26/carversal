@@ -222,6 +222,15 @@ a{
 	.moreLink span{
 		font-size: larger !important;
 	}
+	slider-left-btn{
+		display: none !important;
+	}
+	.DiscoberBlogHeading{
+		font-size: 1.4rem;
+	}
+	.discoverDetails div{
+		display: none;
+	}
 }
 
 

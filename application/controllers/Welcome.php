@@ -44,7 +44,7 @@ class Welcome extends CI_Controller
 		$Bdata = array();
 		if ($data->totalCount > 0) {
 			foreach ($data->data as $row) {
-				$row->detail = substr($row->detail, 0, 400) . '...';
+				$row->detail = strip_tags(substr($row->detail, 0, 400)) . '...';
 				array_push($Bdata, $row);
 			}
 		}
@@ -109,7 +109,7 @@ class Welcome extends CI_Controller
 				$date = date("F jS, Y h:i:s a", strtotime($date));
 				$row->created_on = $date;
 
-				$row->detail = substr($row->detail, 0, 400) . '...';
+				$row->detail = strip_tags(substr($row->detail, 0, 400)) . '...';
 				array_push($arr, $row);
 			}
 			$response['data2'] = $arr;
@@ -156,7 +156,7 @@ class Welcome extends CI_Controller
 			$Bdata = array();
 			if ($data->totalCount > 0) {
 				foreach ($data->data as $row) {
-					$row->detail = substr($row->detail, 0, 400) . '...';
+					$row->detail = strip_tags(substr($row->detail, 0, 400)) . '...';
 					array_push($Bdata, $row);
 				}
 				shuffle($Bdata);
@@ -174,7 +174,7 @@ class Welcome extends CI_Controller
 					$date = date("F jS, Y h:i:s a", strtotime($date));
 					$row->created_on = $date;
 
-					$row->detail = substr($row->detail, 0, 400) . '...';
+					$row->detail = strip_tags(substr($row->detail, 0, 400)) . '...';
 					array_push($Bdata, $row);
 				}
 				$response['data'] = $Bdata;
@@ -190,7 +190,7 @@ class Welcome extends CI_Controller
 					$date = date("F jS, Y h:i:s a", strtotime($date));
 					$row->created_on = $date;
 
-					$row->detail = substr($row->detail, 0, 400) . '...';
+					$row->detail = strip_tags(substr($row->detail, 0, 400)) . '...';
 					array_push($Bdata, $row);
 				}
 				$response['data'] = $Bdata;
