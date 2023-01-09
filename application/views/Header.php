@@ -66,23 +66,51 @@
 		<div class="col-md-6" id="CarversalMobileMenu">
 			<ul class="align-items-center d-flex justify-content-around list-unstyled mb-0" id="CarversalMenu">
 				<!--menu-->
-				<li class="MenuItems badge-pill px-0 mx-md-2 py-md-1 mt-3 "><a href="<?= base_url() ?>"
+				<li class="MenuItems badge-pill px-0 mx-md-2 py-md-1 mt-3 mt-md-0 "><a href="<?= base_url() ?>"
 																			   class="<?php echo $this->uri->segment(1) == '' ? 'ActiveMenu' : '' ?>">Trending</a>
 				</li>
-				<li class="MenuItems badge-pill px-0 mx-md-2 py-md-1 mt-3 "><a
+				<li class="MenuItems badge-pill px-0 mx-md-2 py-md-1 mt-3 mt-md-0 "><a
 							class="<?php echo $this->uri->segment(1) == 'Discover' ? 'ActiveMenu' : '' ?>"
 							href="<?= base_url() ?>Discover">Discover</a></li>
-				<li class="MenuItems badge-pill px-0 mx-md-2 py-md-1 mt-3 "><a
+				<li class="MenuItems badge-pill px-0 mx-md-2 py-md-1 mt-3 mt-md-0"><a
 							class="<?php echo $this->uri->segment(1) == 'Latest' ? 'ActiveMenu' : '' ?>"
 							href="<?= base_url() ?>Latest">Latest</a></li>
-				<li class="MenuItems badge-pill px-0 mx-md-2 py-md-1 mt-3 "><a
+				<li class="MenuItems badge-pill px-0 mx-md-2 py-md-1 mt-3 mt-md-0"><a
 							class="<?php echo $this->uri->segment(1) == 'Popular' ? 'ActiveMenu' : '' ?>"
 							href="<?= base_url() ?>Popular">Popular</a></li>
-				<li class="d-none d-md-block">
+				<?php
+				if (isset($this->session->user_session)) {
+					$username = $this->session->user_session->name;
+					?>
+					<a  style="text-decoration: none;" class="pt-1">
+						<div class="dropdown show">
+							<a class="btn btn-sm  dropdown-toggle " style="color: #454545" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><b><?php echo $this->session->user_session->name;?></b></a>
+
+							<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+								<a href="<?=base_url('logout')?>" class="dropdown-item" href="#">Logout</a>
+
+							</div>
+						</div>
+
+					</a>
+					<?php
+				} else { ?>
+					<a href="<?=base_url('Login')?>" style="text-decoration: none;" class="pt-1">
+						<li class="login_row_list px-3">Login/Sign up</li>
+					</a>
+				<?php }
+				?>
+
+
+
+
+				<li></li>
+				<li class="d-none d-md-block mt-3 mt-md-0">
 					<div>
 						<input type="checkbox" class="checkbox" id="checkbox">
-						<label for="checkbox" class="label  ml-1">
-							<i class="fa-moon fas small"></i><i class="fa-sun fas small"></i>
+						<label for="checkbox" class="label  ml-1 mb-0">
+							<i class="fa-moon fas small" style="font-size: x-small"></i>
+							<i class="fa-sun fas small" style="font-size: x-small"></i>
 							<div class="ball"></div>
 						</label>
 					</div>
@@ -93,8 +121,8 @@
 			<div class="d-flex align-items-center mt-3 mt-md-0">
 				<i class="fa-left-long fa-solid mr-2 d-block d-md-none" id="HideSearch" style="font-size: x-large;"></i>
 				<div class="SearchBar align-items-center align-items-sm-center w-100 badge-pill border border-dark d-f d-flex py-1">
-					<span><i class="fa-solid fa-magnifying-glass"></i></span>
-					<input type="search" class="border-0 form-control py-0"
+					<span onclick="search(document.getElementById('search').value)"><i class="fa-solid fa-magnifying-glass"></i></span>
+					<input type="search" id="search" class="border-0 form-control py-0 bg-transparent"
 						   style="font-size: small; box-shadow: none !important;" placeholder="Search">
 				</div>
 			</div>
@@ -135,10 +163,10 @@
 						<li class="h6">
 							<div>
 								<input type="checkbox" class="checkbox" id="checkbox">
-								<label for="checkbox" class="label mb-5 ml-3">
-									<i class="fas fa-moon"></i>
-									<i class='fas fa-sun'></i>
-									<div class='ball'>
+								<label for="checkbox" class="label  ml-1 mb-0">
+									<i class="fa-moon fas small" style="font-size: x-small"></i>
+									<i class="fa-sun fas small" style="font-size: x-small"></i>
+									<div class="ball"></div>
 								</label>
 							</div>
 						</li>
@@ -170,6 +198,11 @@
 	checkbox.addEventListener('change', () => {
 		document.body.classList.toggle('dark');
 	})
+
+	function search(string){
+		console.log(window.find(string));
+		;
+	}
 </script>
 <script>var base_url = '<?=base_url()?>';</script>
 <script>var baseURL = '<?=base_url()?>';</script>

@@ -39,21 +39,21 @@
 	</div>
 
 	<!--	next and privius page-->
-	<div class="row RobotoFont">
-		<div class="col-md-6">
+	<div class="row RobotoFont ">
+		<div class="col-md-6 col-6 moreLink">
 			<a href="<?=base_url()?>Discovery" class="PrevNext align-items-center d-flex">
 				<!--				<div class="align-items-center d-flex privius">-->
 				<span style="font-size: xx-large;"><i class="fa-sharp fa-solid fa-left-long"></i></span>
-				<h4 class="mb-0 ml-2">Back to Discover</h4>
+				<h4 class="mb-0 ml-2 moreLink">Back to Discover</h4>
 
 				<!--				</div>-->
 			</a>
 
 		</div>
-		<div class="col-md-6">
+		<div class="col-md-6 col-6 pl-0 moreLink">
 			<a href="<?=base_url()?>DiscoveryBlogs/2" class="PrevNext align-items-center d-flex justify-content-end">
 				<!--				<div class="Next align-items-center d-flex ">-->
-				<h4 class="mb-0 mr-2">See More Like This</h4>
+				<h4 class="mb-0 mr-2 ">See More Like This</h4>
 				<span style="font-size: xx-large;"><i class="fa-sharp fa-solid fa-right-long"></i></span>
 
 				<!--				</div>-->

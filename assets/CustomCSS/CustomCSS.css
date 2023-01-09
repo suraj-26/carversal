@@ -181,11 +181,13 @@ carouselOneSlideBtn {
 #CarversalMenu li a:hover{
 	text-decoration: none !important;
 }
-.HeaderBorder li a {
+/*.HeaderBorder  {*/
 
-	color: black;
+/*	color: black;*/
+/*}*/
+a{
+	color: unset !important;
 }
-
 .MobileIconMenu{
 	background: linear-gradient(358deg, white, #ffffffa3) !important;
 	position: fixed;
@@ -214,6 +216,12 @@ carouselOneSlideBtn {
 		font-weight: bold;
 		color: grey;
 	}
+	.moreLink h4{
+		font-size: 1rem;
+	}
+	.moreLink span{
+		font-size: larger !important;
+	}
 }
 
 
@@ -231,7 +239,9 @@ carouselOneSlideBtn {
 
 
 body.dark {
-	background-color: #292c35;
+	background-color: #121212;
+	color: white!important;
+
 }
 .checkbox {
 	opacity: 0;
@@ -239,10 +249,11 @@ body.dark {
 }
 
 .label {
-	width: 40px;
-	height: 20px;
+	width: 36px;
+	height: 17px;
 	background-color: #111;
 	display: flex;
+	border: 1px solid white;
 	border-radius: 50px;
 	align-items: center;
 	justify-content: space-between;
@@ -252,11 +263,11 @@ body.dark {
 }
 
 .ball {
-	width: 15px;
-	height: 15px;
+	width: 13px;
+	height: 13px;
 	background-color: white;
 	position: absolute;
-	top: 2px;
+	top: 1px;
 	left: 2px;
 	border-radius: 50%;
 	transition: transform 0.2s linear;
@@ -264,7 +275,7 @@ body.dark {
 
 /*  target the elemenent after the label*/
 .checkbox:checked + .label .ball{
-	transform: translateX(19px);
+	transform: translateX(17px);
 }
 
 .fa-moon {

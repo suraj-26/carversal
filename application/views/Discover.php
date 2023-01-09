@@ -78,7 +78,7 @@
 			<?php } ?>
 			<div class="row">
 				<?php if (array_key_exists(3, $data)) { ?>
-					<div class="col-md-7 pl-4">
+					<div class="col-md-7 ">
 						<div class="boxShadow" style="border-radius: 8px">
 							<img src="<?= base_url() ?>uploads/<?= $data[3]->image ?>" style="border-radius: 8px"
 								 class="w-100" alt="">

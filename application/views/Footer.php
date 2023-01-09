@@ -32,22 +32,22 @@
 
 				</div>
 			</div>
-			<div class="col-md-4">
+			<div class="col-6 col-md-4 mt-3 mt-md-0">
 				<ul class="list-unstyled">
 					<li><h5>Company</h5></li>
-					<li><a style="text-decoration: none;color: white" href="<?=base_url()?>AboutUs"><h6>About Us</h6></a></li>
-					<li><a style="text-decoration: none;color: white" href="<?=base_url()?>AboutUs"><h6>Work with us</h6></a></li>
-					<li><a style="text-decoration: none;color: white" href="<?=base_url()?>PrivacyPolicy"><h6>Privacy Policy</h6></a></li>
+					<li><a style="text-decoration: none;color: white" href="http://192.168.1.16/carversal/AboutUs"><h6>About Us</h6></a></li>
+					<li><a style="text-decoration: none;color: white" href="http://192.168.1.16/carversal/AboutUs"><h6>Work with us</h6></a></li>
+					<li><a style="text-decoration: none;color: white" href="http://192.168.1.16/carversal/PrivacyPolicy"><h6>Privacy Policy</h6></a></li>
 				</ul>
 
 			</div>
-			<div class="col-md-4">
+			<div class="col-6 col-md-4 mt-3 mt-md-0">
 				<ul class="list-unstyled">
 					<li><h5>Page</h5></li>
-					<li><a style="text-decoration: none;color: white" href="<?=base_url()?>"><h6>Home </h6></li>
-					<li><a style="text-decoration: none;color: white" href="<?=base_url()?>Discover"><h6>Discover</h6></a></li>
-					<li><a  style="text-decoration: none;color: white" href="<?=base_url()?>Latest"><h6>Latest</h6></a></li>
-					<li><a style="text-decoration: none;color: white" href="<?=base_url()?>Popular"><h6>Popular</h6></a></li>
+					<li><a style="text-decoration: none;color: white" href="http://192.168.1.16/carversal/"><h6>Home </h6></a></li><a style="text-decoration: none;color: white" href="http://192.168.1.16/carversal/">
+					</a><li><a style="text-decoration: none;color: white" href="http://192.168.1.16/carversal/"></a><a style="text-decoration: none;color: white" href="http://192.168.1.16/carversal/Discover"><h6>Discover</h6></a></li>
+					<li><a style="text-decoration: none;color: white" href="http://192.168.1.16/carversal/Latest"><h6>Latest</h6></a></li>
+					<li><a style="text-decoration: none;color: white" href="http://192.168.1.16/carversal/Popular"><h6>Popular</h6></a></li>
 				</ul>
 
 			</div>
