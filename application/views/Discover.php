@@ -9,7 +9,7 @@
 </head>
 <body>
 <?php include_once "Header.php" ?>
-<div class="container">
+<div class="container search_results">
 	<!--	card 1-->
 	<?php if (array_key_exists(0, $data)) { ?>
 		<div class="row my-4 boxShadow" style="border-radius: 8px">

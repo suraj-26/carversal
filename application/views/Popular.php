@@ -14,7 +14,7 @@
 </head>
 <body>
 <?php include_once "Header.php" ?>
-<div class="container">
+<div class="container search_results">
 	<div class="row py-4">
 		<div class="col-md-11">
 			<div class="owl-carousel TreandingCarousel  owl-theme" id="TrendingCarCarousel">

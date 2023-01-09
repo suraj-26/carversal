@@ -21,7 +21,7 @@
 <!--header -->
 <?php include_once "Header.php" ?>
 
-<div class="container">
+<div class="container search_results">
 	<!--	1st car carousel -->
 
 	<div class="row py-4">
@@ -58,7 +58,7 @@
 </div>
 
 <!--	car card below newsletter -->
-<div class="row mt-4" style="max-width: 1140px;
+<div class="row mt-4 search_results" style="max-width: 1140px;
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;

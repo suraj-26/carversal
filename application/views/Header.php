@@ -40,6 +40,10 @@
 		  crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
 
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+			integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+
 	<title></title>
 	<style>
 		.form-control:focus {
@@ -80,11 +84,11 @@
 							href="<?= base_url() ?>Popular">Popular</a></li>
 				<?php
 				if (isset($this->session->user_session)) {
-					$username = $this->session->user_session->name;
+					$username = $this->session->user_session->username;
 					?>
 					<a  style="text-decoration: none;" class="pt-1">
 						<div class="dropdown show">
-							<a class="btn btn-sm  dropdown-toggle " style="color: #454545" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><b><?php echo $this->session->user_session->name;?></b></a>
+							<a class="btn btn-sm  dropdown-toggle " style="color: #454545" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><b><?php echo $this->session->user_session->username;?></b></a>
 
 							<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 								<a href="<?=base_url('logout')?>" class="dropdown-item" href="#">Logout</a>
@@ -96,7 +100,7 @@
 					<?php
 				} else { ?>
 					<a href="<?=base_url('Login')?>" style="text-decoration: none;" class="pt-1">
-						<li class="login_row_list px-3">Login/Sign up</li>
+						<li class="login_row_list px-0 mx-md-2 py-md-1 mt-3 mt-md-0">Login</li>
 					</a>
 				<?php }
 				?>
@@ -122,7 +126,7 @@
 				<i class="fa-left-long fa-solid mr-2 d-block d-md-none" id="HideSearch" style="font-size: x-large;"></i>
 				<div class="SearchBar align-items-center align-items-sm-center w-100 badge-pill border border-dark d-f d-flex py-1">
 					<span onclick="search(document.getElementById('search').value)"><i class="fa-solid fa-magnifying-glass"></i></span>
-					<input type="search" id="search" class="border-0 form-control py-0 bg-transparent"
+					<input type="search" id="filter" class="border-0 form-control py-0 bg-transparent"
 						   style="font-size: small; box-shadow: none !important;" placeholder="Search">
 				</div>
 			</div>
@@ -208,3 +212,28 @@
 <script>var baseURL = '<?=base_url()?>';</script>
 </body>
 </html>
+<script>
+	$("#filter").keyup(function() {
+
+		// Retrieve the input field text and reset the count to zero
+		var filter = $(this).val(),
+				count = 0;
+
+		// Loop through the comment list
+		$('.search_results div').each(function() {
+
+
+			// If the list item does not contain the text phrase fade it out
+			if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+				$(this).hide();  // MY CHANGE
+
+				// Show the list item if the phrase matches and increase the count by 1
+			} else {
+				$(this).show(); // MY CHANGE
+				count++;
+			}
+
+		});
+
+	});
+</script>
