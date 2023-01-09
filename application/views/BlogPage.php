@@ -50,6 +50,17 @@
 						<div class="">
 							<div class="align-items-center d-flex justify-content-between mt-3 pr-3 px-2">
 								<div class="align-items-center d-flex mb-2 mt-3">
+								</div>
+								<div class=" socialIcons blogPageSocialIcon" style=" font-size: larger;">
+									<a style="margin-right: 20px;font-weight: 700"><?=$Data->fav_count?> Likes</a>
+								</div>
+
+
+							</div>
+						</div>
+						<div class="">
+							<div class="align-items-center d-flex justify-content-between mt-3 pr-3 px-2">
+								<div class="align-items-center d-flex mb-2 mt-3">
 									<img src="<?= base_url() ?>/assets/CarvesalImage/User.jpg"
 										 class="mr-2 rounded-circle" alt="" style="
     width: 36px;
@@ -102,6 +113,8 @@
 		app.request("changeStatus",formdata).then(res=>{
 			if(res.status=== 200){
 				$(this).toggleClass('favoriteBlog');
+			}else{
+				app.errorToast(res.body);
 			}
 		}).catch(error=>console.log(error));
 	});
